@@ -1,0 +1,139 @@
+@import '../_root.css';
+
+@media (min-width: 320px) {
+
+	body {
+		background-color: var(--tvidColoursBackground);
+	}
+
+	.container {
+		margin: 32px 5% 0;
+		color: white;
+	}
+
+	nav {
+		height: 50px;
+	}
+
+	.burger {
+		display: flex;
+		height: 20px;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 90vh;
+		left: 7%;
+		z-index: 2;
+	}
+
+	.burger input {
+		position: absolute;
+		height: 28px;
+		width: 28px;
+		top: -4px;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.burger span {
+		width: 28px;
+		height: 3px;
+		border-radius: 3px;
+		background-color: var(--tvidColoursPlay);
+		box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+		transition: all 0.5s ease-in-out;
+	}
+
+	.burger span:nth-child(2) {
+		width: 17px;
+	}
+
+	.burger span:last-child {
+		width: 23px;
+	}
+
+	.burger input:checked~span:nth-child(2) {
+		width: 28px;
+	}
+
+	.burger input:checked~span:last-child {
+		width: 28px;
+	}
+
+	nav ul {
+		display: flex;
+		justify-content: space-evenly;
+		height: 90vh;
+		width: 90%;
+		border-radius: 5px;
+		transition: all 0.8s ease;
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		transform: translateX(-100%);
+		/*transform: translateY(100%);*/
+		opacity: 0;
+		background-color: var(--tvidColoursMagnet);
+		box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+		z-index: 1;
+	}
+
+	nav ul.slide {
+		transform: translateX(0);
+		/*transform: translateY(0);*/
+		opacity: 1;
+	}
+
+	nav ul li a {
+		display: flex;
+		color: white;
+		font-weight: 100;
+		/*background-color: var(--tvidColoursBackground);*/
+		/*padding: 10px 0;*/
+		width: 90vw;
+		height: 10vh;
+		align-items: center;
+		justify-content: center;
+		/*border: 3px solid black;*/
+	}
+
+	nav ul li a:hover {
+		background-color: var(--tvidColoursBackground);
+	}
+
+	nav ul li footer h6 {
+		font-weight: 100;
+	}
+
+	.beranda {
+		/*display: grid;*/
+		display: none;
+	}
+
+	.beranda span {
+		background-color: black;
+	}
+
+	.beranda .profile {
+		position: fixed;
+		border: 3px solid black;
+		border-radius: 50%;
+		margin: -35px 55px;
+		height: 32vh;
+		width: 59vw;
+		z-index: -1;
+	}
+
+	.beranda .product {
+		position: fixed;
+		margin: -83px -19px;
+		background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+		height: 50vh;
+		width: 101vw;
+		z-index: -2;
+	}
+
+}

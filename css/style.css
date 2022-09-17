@@ -1,0 +1,17 @@
+@import 'variation/reset.css';
+@import 'variation/whileLoad.css';
+@import 'variation/responsive/smallPhone.css';
+
+/*Respon*/
+@media (min-width: 375px) {}
+@media (min-width: 425px) {}
+
+/*from respon*/
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+
+@media (min-width: 1024px) {}
+/*from respon*/
+@media (min-width: 1200px) {}
+
+@media (min-width: 1440px) {}
