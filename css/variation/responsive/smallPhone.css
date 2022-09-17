@@ -1,9 +1,7 @@
-@import '../_root.css';
-
 @media (min-width: 320px) {
 
 	body {
-		background-color: var(--tvidColoursBackground);
+		background-color: #848484;
 	}
 
 	.container {
@@ -39,7 +37,7 @@
 		width: 28px;
 		height: 3px;
 		border-radius: 3px;
-		background-color: var(--tvidColoursPlay);
+		background-color: #1a1a1a;
 		box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
 		transition: all 0.5s ease-in-out;
 	}
@@ -76,7 +74,7 @@
 		transform: translateX(-100%);
 		/*transform: translateY(100%);*/
 		opacity: 0;
-		background-color: var(--tvidColoursMagnet);
+		background-color: #474747;
 		box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
 		z-index: 1;
 	}
@@ -101,7 +99,7 @@
 	}
 
 	nav ul li a:hover {
-		background-color: var(--tvidColoursBackground);
+		background-color: #848484;
 	}
 
 	nav ul li footer h6 {
