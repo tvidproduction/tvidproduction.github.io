@@ -43,9 +43,11 @@ $RECYCLE.BIN/
 # IGNORE oleh TVID Developments
 /Aset/Gaya/style.css.map
 /Aset/SASS
+/Aset/Gaya
+/Aset/Fungsi
 
 # Sementara
-/Aset
+#/Aset
 /Discography
 
 # Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore
