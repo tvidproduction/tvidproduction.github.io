@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Tampilan Mobile</title>
+
+    <!-- @media (min-width: 450px) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wadah {
+            color: black;
+            height: 100%;
+            display: grid;
+            overflow-x: hidden;
+            font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+            letter-spacing: 1px;
+            background-color: #848484;
+        }
+
+        .kemas section.beranda article {
+            margin: auto 3%;
+            padding: 2%;
+            text-align: justify;
+            top: 60.6%;
+            bottom: 10%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .kemas section.beranda article h1 {
+            font-size: 2em;
+            margin: 5% auto;
+        }
+
+        section.beranda a {
+            display: flex;
+        }
+
+        section.beranda a img {
+            position: relative;
+        }
+
+        section.beranda a img.gambarProduk {
+            top: 0;
+            left: 0;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body class="wadah">
+    <!-- Pembungkus Untuk Konten -->
+    <main class="kemas" alt="Konten TVID Production">
+        <!-- Isi Konten -->
+        <section class="beranda">
+            <article alt="Artikel Produk" title="Artikel Produk TVID Store">
+                <h1>Artikel di Bawah Berisi 781 karakter</h1>
+                <p>Ini adalah isi dari artikel yang maksimalnya berisi 800 karakter, untuk mejelaskan produk dari gambar
+                    kotak yang ada di sebelah kanan, yang berbentuk kotak. Kalau gambar yang tengah itu, adalah gambar
+                    profil dari halaman ini. Jika di klik maka seharusnya mengarahkan ke halaman tentang pembuat halaman
+                    media ini. Saya sengaja menulisnya artikel ini lebih panjang, agar setidaknya hampir mencapai 800
+                    karakter. Ketika anda telah membaca sampai bagian sini, itu artinya. Anda telah membaca setidaknya
+                    enam puluh persen atau lebih, untuk mencapai setidaknya 800 karakter dalam artikel ini. Tapi, maaf
+                    sekali. Karena saya telah lelah untuk mengetik. Maka, mungkin saya akan menyudahi artikel ini
+                    semampu saya dan ada kemungkinan ini masih belum mencapai 800 karakter dalam artikel ini.</p>
+            </article>
+
+            <a href="/Produk">
+                <img src="Aset/Gambar/Antlia Cover.jpg" alt="Gambar Produk" title="Gambar Produk TVID Store"
+                    class="gambarProduk" data-tilt width="380">
+            </a>
+        </section>
+        <!-- Akhir Isi Konten -->
+    </main>
+    <!-- Akhir Pembungkus Untuk Konten -->
+</body>
+
+</html>
