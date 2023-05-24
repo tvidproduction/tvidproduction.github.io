@@ -1,6 +1,6 @@
 # Repositori Resmi Situs TVID Production
 ## Membangun Website TVID
-Ini mungkin membutuhkan waktu yang lama untuk mengembangkannya karena Pengembangnya baru hanya satu orang saja yaitu [Founder](https://tovrn.blogspot.com) [TVID](wp.me/Pbwvnt-2l) sendiri, bagi kamu yang mau ikut membantu untuk mengembangkan Project ini kamu bisa [mengirim pesan](https://wa.me/message/4FUFJSHQ3MN7N1) ke pemilik github ini untuk dapat mengembangkannya secara legal dan agar Pengembang project ini tahu kalau kamu juga ikut serta dalam Pengembangan Project ini (juga untuk lebih menghargai Pemilik Repository ini)
+Ini mungkin membutuhkan waktu yang lama untuk mengembangkannya karena Pengembangnya baru hanya satu orang saja yaitu [Founder](https://tovrn.blogspot.com) [TVID](http://wp.me/Pbwvnt-2l) sendiri, bagi kamu yang mau ikut membantu untuk mengembangkan Project ini kamu bisa [mengirim pesan](https://wa.me/message/4FUFJSHQ3MN7N1) ke pemilik github ini untuk dapat mengembangkannya secara legal dan agar Pengembang project ini tahu kalau kamu juga ikut serta dalam Pengembangan Project ini (juga untuk lebih menghargai Pemilik Repository ini)
 
 Terima Kasih
 
