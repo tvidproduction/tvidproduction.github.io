@@ -29,6 +29,66 @@
             background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
         }
 
+        nav {
+            top: 90.8%;
+/*            top: 95%;*/
+            width: 100vw;
+            z-index: 2;
+            display: flex;
+            position: fixed;
+        }
+
+        nav .burger {
+            left: 7%;
+/*            left: 3%;*/
+            height: 20px;
+            z-index: 5;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+/*            background-color: #ddd;*/
+        }
+
+        nav .burger input {
+            top: -4px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            opacity: 0;
+/*            opacity: .1;*/
+            position: absolute;
+        }
+
+        nav .burger span {
+            width: 28px;
+            height: 3px;
+            transition: all 500ms ease-in-out;
+            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+            border-radius: 3px;
+            background-color: #1a1a1a;
+        }
+
+        nav .burger span:nth-child(2) {
+            width: 17px;
+        }
+
+        nav .burger span:last-child {
+            width: 23px;
+        }
+
+        nav .burger input:checked~span:nth-child(2) {
+            width: 28px;
+        }
+
+        nav .burger input:checked~span:last-child {
+            width: 28px;
+        }
+
+        ul {
+            display: none;
+        }
+
         .beranda {
             display: grid;
             justify-items: center;
@@ -59,13 +119,52 @@
 
         img.gambarProduk {
             width: 100%;
-            background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+/*            background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));*/
+/*            opacity: .1;*/
         }
     </style>
     <title>[ Beranda ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
 </head>
 
 <body class="wadah">
+    <!-- Navigasi -->
+    <nav>
+        <div class="burger">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="/">Beranda</a></li>
+            <li>
+                <a href="/Play">
+                    Main
+                </a>
+            </li>
+            <li>
+                <a href="https://wp.me/Pbwvnt-2l">
+                    Tentang Kami
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/message/4FUFJSHQ3MN7N1" target="_blank">
+                    Hubungi Kami
+                </a>
+            </li>
+            <!-- <li>
+                <footer>
+                    <h6>
+                        TVID Developments
+                        <br>
+                        &copy; <span id="waktu"></span> All rights reserved.
+                    </h6>
+                </footer>
+            </li> -->
+        </ul>
+    </nav>
+    <!-- Akhir Navigasi -->
+
     <!-- Pembungkus Untuk Konten -->
     <main class="kemas" alt="Konten TVID Production">
         <!-- Isi Konten -->
