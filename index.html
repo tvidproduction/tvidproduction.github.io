@@ -20,6 +20,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
         .wadah {
             display: grid;
             background-color: #848484;
@@ -30,24 +43,24 @@
         }
 
         nav {
-            top: 90.8%;
-/*            top: 95%;*/
+            bottom: 0;
             width: 100vw;
+            height: 5vh;
             z-index: 2;
             display: flex;
             position: fixed;
+            background-color: #666;
+            align-items: center;
         }
 
         nav .burger {
-            left: 7%;
-/*            left: 3%;*/
+            left: 3%;
             height: 20px;
             z-index: 5;
             display: flex;
             position: relative;
             flex-direction: column;
             justify-content: space-between;
-/*            background-color: #ddd;*/
         }
 
         nav .burger input {
@@ -56,7 +69,6 @@
             height: 28px;
             cursor: pointer;
             opacity: 0;
-/*            opacity: .1;*/
             position: absolute;
         }
 
@@ -86,7 +98,52 @@
         }
 
         ul {
-            display: none;
+            left: 3.6%;
+            bottom: 7%;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            width: 90vw;
+            height: 90vh;
+            z-index: 4;
+            display: flex;
+            position: fixed;
+            transform: translateX(-110%);
+            transition: all 800ms ease;
+            align-content: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: #474747;
+            box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .5);
+        }
+
+        ul.geser {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        ul li a {
+            width: 90vw;
+            color: #848484;
+            height: 10vh;
+            display: flex;
+            font-weight: 300;
+            align-items: center;
+            letter-spacing: 3px;
+            justify-content: center;
+        }
+
+        ul li a:hover {
+            color: #ddd;
+            font-weight: 500;
+            background-color: #848484;
+        }
+
+        li footer h6 {
+            text-align: center;
+            color: #666;
+            cursor: default;
+            font-weight: 100;
+            letter-spacing: 3px;
         }
 
         .beranda {
@@ -108,7 +165,7 @@
         }
 
         p {
-            padding: 0 0 6%;
+            padding: 0 0 13%;
         }
 
         img.gambarProfil {
@@ -119,8 +176,6 @@
 
         img.gambarProduk {
             width: 100%;
-/*            background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));*/
-/*            opacity: .1;*/
         }
     </style>
     <title>[ Beranda ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
@@ -152,7 +207,7 @@
                     Hubungi Kami
                 </a>
             </li>
-            <!-- <li>
+            <li>
                 <footer>
                     <h6>
                         TVID Developments
@@ -160,7 +215,7 @@
                         &copy; <span id="waktu"></span> All rights reserved.
                     </h6>
                 </footer>
-            </li> -->
+            </li>
         </ul>
     </nav>
     <!-- Akhir Navigasi -->
@@ -194,6 +249,22 @@
         <!-- Akhir Isi Konten -->
     </main>
     <!-- Akhir Pembungkus Untuk Konten -->
+    <script>
+        // Menu Geser
+        const menu = document.querySelector('.burger input')
+        const navigasi = document.querySelector('nav ul')
+
+        menu.addEventListener('click', ()=>{
+            navigasi.classList.toggle('geser')
+        })
+        // Akhir Menu Geser
+
+        // Footer Waktu[Tahun]
+        const isiDengan = new Date()
+
+        document.getElementById('waktu').innerHTML = isiDengan.getFullYear()
+        // Akhir Footer Waktu[Tahun]
+    </script>
 </body>
 
 </html>
