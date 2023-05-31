@@ -46,22 +46,20 @@ $RECYCLE.BIN/
 /Aset/Gaya
 /Aset/Fungsi
 
+# Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore
+/node_modules
+#.gitignore
+
 # Sementara
 # /Aset
 /Discography
-
-# Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore
-/node_modules
-
-# Sementara
 /Masuk
 /Play
 /Produk
 /Store
 /Tentang
-/Videography
+/Videography/index1.html
 
-#.gitignore
 .gitattributes
 index1.html
 konfigurasi-antarmuka.js
