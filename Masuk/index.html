@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id, en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Metadata -->
+    <meta name="description" content="TVID Production Official Website">
+    <meta name="author" content="TVID Development">
+    <meta name="keywords"
+        content="TVID Production, TVID Records, TVID Pictures, TVID Store, TVID Developments, TVID Plays">
+    <!-- Akhir Metadata -->
+    <link rel="icon" type="image/x-icon" href="../Aset/TVID-Favicon.png">
+    <style>
+        * {
+/*            border: solid red 1px;*/
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .wadah {
+            color: white;
+            display: grid;
+            background-color: #848484;
+            overflow-x: hidden;
+            font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+            letter-spacing: 1px;
+            background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+        }
+
+        nav {
+            bottom: 0;
+            width: 100vw;
+            height: 7vh;
+            z-index: 2;
+            display: flex;
+            position: fixed;
+            background-color: #666;
+            align-items: center;
+        }
+
+/*        Style Burger Bar*/
+        nav .burger {
+            left: 3%;
+            height: 20px;
+            z-index: 5;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        nav .burger input {
+            top: -4px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+        }
+        nav .burger span {
+            width: 28px;
+            height: 3px;
+            transition: all 500ms ease-in-out;
+            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+            border-radius: 3px;
+            background-color: #1a1a1a;
+        }
+        nav .burger span:nth-child(2) {
+            width: 17px;
+        }
+        nav .burger span:last-child {
+            width: 23px;
+        }
+        nav .burger input:checked~span:nth-child(2) {
+            width: 28px;
+        }
+        nav .burger input:checked~span:last-child {
+            width: 28px;
+        }
+/*        Akhir Style Burger Bar*/
+
+/*        Style Daftar Menu Kiri*/
+        nav aside.kiri ul {
+            left: 5%;
+            bottom: 9%;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            width: 90vw;
+            height: 90vh;
+            z-index: 4;
+            display: flex;
+            position: fixed;
+            transform: translateX(-110%);
+            transition: all 800ms ease;
+            align-content: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: #474747;
+            box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .5);
+        }
+        nav aside.kiri ul.geser {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        nav aside.kiri ul li a {
+            width: 90vw;
+            color: #848484;
+            height: 10vh;
+            display: flex;
+            font-weight: 300;
+            align-items: center;
+            letter-spacing: 3px;
+            justify-content: center;
+        }
+        nav aside.kiri ul li a:hover {
+            color: #ddd;
+            font-weight: 500;
+            background-color: #848484;
+        }
+        nav aside.kiri ul li footer h6 {
+            text-align: center;
+            color: #666;
+            cursor: default;
+            font-weight: 100;
+            letter-spacing: 3px;
+        }
+/*        Akhir Style Daftar Menu Kiri*/
+
+/*        Style Kolom Pencarian*/
+        nav .pembungkusPencarian {
+/*            display: none;*/
+            position: relative;
+            z-index: 3;
+            margin: auto;
+            left: 1%;
+        }
+        nav .pembungkusPencarian section.pencarian {
+            width: 100%;
+/*            background: white;*/
+            border-radius: 5px;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+        }
+        nav .pembungkusPencarian section.pencarian input {
+            width: 240px;
+            height: 32px;
+            border: none;
+            padding: 0 10px;
+            outline: none;
+            font-size: 18px;
+            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            cursor: not-allowed;
+        }
+        nav .pembungkusPencarian section.pencarian input::placeholder {
+            text-align: center;
+            color: #ddd;
+        }
+        nav .pembungkusPencarian section.pencarian section.daftarPencarian {
+            display: none;
+        }
+/*        Akhir Style Kolom Pencarian*/
+
+/*        Style Tombol Masuk*/
+        nav section.masuk {
+            right: 3%;
+            z-index: 3;
+            position: relative;
+            display: none;
+        }
+        nav section.masuk button {
+            border: none;
+            font-size: 1em;
+            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+            border-radius: 5px;
+            background-color: #1a1a1a;
+        }
+        nav section.masuk button:hover {
+            cursor: default;
+            background-color: #474747;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+        }
+        nav section.masuk button a {
+            color: white;
+            padding: 5px;
+        }
+        nav section.masuk button a:hover {
+            color: #ddd;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+        }
+/*        Akhir Style Tombol Masuk*/
+
+        .masuk {
+/*            width: 450px;*/
+            width: 93.8vw;
+/*            height: 400px;*/
+/*            height: 54.62154vh;*/
+            height: 56.4vh;
+/*            margin: auto;*/
+            margin: 30% auto;
+            background-color: #474747;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 3%;
+            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+            border-radius: 3%;
+        }
+        section.masuk h1 {
+            cursor: default;
+/*            text-align: center;*/
+/*            font-size: 2em;*/
+            font-size: 2.8em;
+        }
+        section.masuk label {
+            cursor: pointer;
+        }
+        section.masuk h5 {
+            font-size: medium;
+            font-weight: 500;
+        }
+        section.masuk input {
+/*            width: 280px;*/
+            width: 64.8vw;
+/*            margin: 12px auto 48px;*/
+            margin: 1vh auto 4.6vh;
+/*            height: 32px;*/
+            height: 4.8vh;
+            border: none;
+            outline: none;
+            padding: 10px;
+/*            font-size: 18px;*/
+            font-size: 1.125em;
+            background-color: white;
+            border-radius: 5px;
+        }
+        section.masuk input::placeholder {
+            font-weight: 100;
+            letter-spacing: 1.8px;
+            color: #1a1a1a47;
+            font-size: .8em;
+            text-align: center;
+        }
+        section.masuk form ul li {
+            display: flex;
+            justify-content: flex-end;
+        }
+        section.masuk form ul li button {
+            color: white;
+            border: none;
+            padding: 5px;
+            font-size: 1.1em;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+            border-radius: 5px;
+            background-color: #1a1a1a;
+        }
+        section.masuk form ul li button:hover {
+            color: #ddd;
+            cursor: pointer;
+            background-color: #727272;
+        }
+    </style>
+    <title>[ Masuk ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
+</head>
+
+<body class="wadah">
+    <!-- Navigasi -->
+    <nav class="bawah">
+        <!-- Ikon Menu -->
+        <div class="burger" tabindex="1" role="button" title="Menu">
+            <!-- <label> -->
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- </label> -->
+        </div>
+        <!-- Akhir Ikon Menu -->
+
+        <aside class="kiri">
+            <!-- Daftar Menu Bergeser -->
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li>
+                    <a href="/Videography">
+                        Videografi
+                    </a>
+                </li>
+                <li>
+                    <a href="/Discography">
+                        Diskografi
+                    </a>
+                </li>
+                <li>
+                    <a href="/Store">
+                        Toko
+                    </a>
+                </li>
+                <li>
+                    <a href="/Play">
+                        Main
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wp.me/Pbwvnt-2l">
+                        Tentang Kami
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/message/4FUFJSHQ3MN7N1" target="_blank">
+                        Hubungi Kami
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="https://api.whatsapp.com/send/?phone=6285195401239&text&type=phone_number&app_absent=1" target="_blank">
+                        Hubungi Kami
+                    </a>
+                </li> -->
+                <li>
+                    <footer>
+                        <h6>
+                            TVID Developments
+                            <br>
+                            &copy; <span id="waktu"></span> All rights reserved.
+                            <br>
+                            Versi 1.0.0
+                        </h6>
+                    </footer>
+                </li>
+            </ul>
+            <!-- Akhir Daftar Menu Bergeser -->
+        </aside>
+
+        <!-- Kode Pencarian -->
+        <div class="pembungkusPencarian">
+            <section class="pencarian" title="Kolom Pencarian">
+                <!-- <label for="kolomPencarian"></label> -->
+                <input type="search" id="kolomPencarian" placeholder="Telusuri" maxlength="30" autocomplete="off" autofocus readonly>
+                <section class="daftarPencarian">
+                    <li>
+                        <span>
+                            <a href="/">
+                                <img src="Aset/Gambar/Daftar Putar Spotify (Playlist) 5.0.png" alt="Profil Pencarian" title="Gambar Profil Pencarian ke 1" height="38" loading="lazy">
+                                <h5>30 Character Longes Character </h5>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="/">
+                                <img src="Aset/Gambar/Profile.jpg" alt="Profil Pencarian" title="Gambar Profil Pencarian ke 2" height="38" loading="lazy">
+                                <h5>30 Character Longes Character </h5>
+                            </a>
+                        </span>
+                    </li>
+                </section>
+            </section>
+        </div>
+        <!-- Akhir Kode Pencarian -->
+
+        <!-- Kode Autentikasi -->
+        <section class="masuk" alt="Tombol Masuk">
+            <button>
+                <a href="/Masuk">Masuk</a>
+            </button>
+        </section>
+        <!-- Akhir Kode Autentikasi -->
+    </nav>
+    <!-- Akhir Navigasi -->
+
+    <!-- Pembungkus Untuk Konten -->
+    <main class="kemas">
+        <!-- Isi Konten -->
+        <section class="masuk">
+            <h1>Masuk</h1>
+            <form action="/" method="POST">
+                <ul>
+                    <li>
+                        <label for="UMLogin">
+                            <h5>Nama Pengguna</h5>
+                            <input type="text" id="UMLogin" autocomplete="off" minlength="3" maxlength="12" placeholder="Masukkan Nama Pengguna" required>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="PWLogin">
+                            <h5>Kata Sandi</h5>
+                            <input type="password" id="PWLogin" autocomplete="off" minlength="3" maxlength="30" placeholder="Masukkan Kata Sandi" required>
+                        </label>
+                    </li>
+                    <li>
+                        <button type="submit">Masuk!</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <!-- Akhir Isi Konten -->
+    </main>
+    <!-- Akhir Pembungkus Untuk Konten -->
+    <script>
+        // Menu Geser
+        const menu = document.querySelector('.burger input')
+        const navigasi = document.querySelector('nav ul')
+
+        menu.addEventListener('click', ()=>{
+            navigasi.classList.toggle('geser')
+        })
+        // Akhir Menu Geser
+
+        // Footer Waktu[Tahun]
+        const isiDengan = new Date()
+
+        document.getElementById('waktu').innerHTML = isiDengan.getFullYear()
+        // Akhir Footer Waktu[Tahun]
+    </script>
+</body>
+
+</html>
