@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="../Aset/TVID-Favicon.png">
     <link rel="stylesheet" href="../Aset/Gaya/style.css">
     <script src="../Aset/script.js" type="module" defer></script>
-    <title>[ Videografi ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
+    <title>[ Masuk ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
 </head>
 
 <body class="wadah">
@@ -89,7 +89,7 @@
         <div class="pembungkusPencarian">
             <section class="pencarian" title="Kolom Pencarian">
                 <!-- <label for="kolomPencarian"></label> -->
-                <input type="search" id="kolomPencarian" placeholder="Telusuri" maxlength="30" autocomplete="off" autofocus readonly>
+                <input type="search" id="kolomPencarian" placeholder="Telusuri" maxlength="30" autocomplete="off">
                 <section class="daftarPencarian tersembunyi">
                     <li>
                         <span>
@@ -113,9 +113,9 @@
         <!-- Akhir Kode Pencarian -->
 
         <!-- Kode Autentikasi -->
-        <section class="masuk" alt="Tombol Masuk">
+        <section class="masuk tersembunyi" alt="Tombol Masuk">
             <button>
-                <a href="/SignIn">Masuk</a>
+                <a href="/Masuk">Masuk</a>
             </button>
         </section>
         <!-- Akhir Kode Autentikasi -->
@@ -125,49 +125,27 @@
     <!-- Pembungkus Untuk Konten -->
     <main class="kemas">
         <!-- Isi Konten -->
-        <section class="videografi">
-            <h3>Videografi</h3>
-            <h6>Berdasarkan Abjad</h6>
-            <section class="daftarVideos">
+        <section class="masuk">
+            <h1>Masuk</h1>
+            <form action="/Dashboard" method="GET" autocomplete="off">
                 <ul>
-                    <!-- <li>
-                        <a href="/">
-                            <img src="../Aset/Gambar/Antlia Banner.jpg" alt="Thumbnail Video">
-                            <h5 class="judul">Judul Video</h5>
-                        </a>
-                    </li> -->
                     <li>
-                        <a href="/" title="(Samain ama Judul-nya)">
-                            <img src="../Aset/Gambar/Antlia Banner.jpg" alt="Thumbnail Video" class="videoThumbs" width="380" loading="lazy">
-                            <h5 class="judulVideos">Title-nya</h5>
-                        </a>
+                        <label for="UMLogin">
+                            <h5>Nama Pengguna</h5>
+                            <input type="text" id="UMLogin" minlength="3" maxlength="12" placeholder="Masukkan Nama Pengguna" autofocus required>
+                        </label>
                     </li>
                     <li>
-                        <a href="/" title="(Samain ama Judul-nya)">
-                            <img src="../Aset/Gambar/Antlia Cover.jpg" alt="Thumbnail Video" class="videoThumbs" width="380" loading="lazy">
-                            <h5 class="judulVideos">Title-nya</h5>
-                        </a>
+                        <label for="PWLogin">
+                            <h5>Kata Sandi</h5>
+                            <input type="password" id="PWLogin" minlength="3" maxlength="30" placeholder="Masukkan Kata Sandi" required>
+                        </label>
                     </li>
                     <li>
-                        <a href="/" title="(Samain ama Judul-nya)">
-                            <img src="../Aset/Gambar/Daftar Putar Spotify (Playlist) 5.0.png" alt="Thumbnail Video" class="videoThumbs" width="380" loading="lazy">
-                            <h5 class="judulVideos">Title-nya</h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/" title="(Samain ama Judul-nya)">
-                            <img src="../Aset/Gambar/Profile Picture TVID.jpg" alt="Thumbnail Video" class="videoThumbs" height="248" loading="lazy">
-                            <h5 class="judulVideos">Title-nya</h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/" title="(Samain ama Judul-nya)">
-                            <img src="../Aset/Gambar/Profile.jpg" alt="Thumbnail Video" class="videoThumbs" width="380" loading="lazy">
-                            <h5 class="judulVideos">Title-nya</h5>
-                        </a>
+                        <button type="submit">Masuk!</button>
                     </li>
                 </ul>
-            </section>
+            </form>
         </section>
         <!-- Akhir Isi Konten -->
     </main>

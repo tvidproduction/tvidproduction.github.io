@@ -1,0 +1,594 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.tersembunyi {
+  display: none;
+}
+
+.wadah {
+  display: grid;
+  overflow-x: hidden;
+  font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+  letter-spacing: 1px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+  background-color: #848484;
+}
+
+.wadah nav.bawah {
+  width: 100vw;
+  height: 7vh;
+  bottom: 0;
+  z-index: 2 !important;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  background-color: #666;
+}
+.wadah nav.bawah div.burger {
+  left: 3%;
+  height: 20px;
+  z-index: 5 !important;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wadah nav.bawah div.burger input[type=checkbox] {
+  top: -4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+.wadah nav.bawah div.burger span {
+  width: 28px;
+  height: 3px;
+  transition: all 500ms ease-in-out;
+  box-shadow: 0 1px 1px 1px rgba(221, 221, 221, 0.4);
+  border-radius: 3px;
+  background-color: #1a1a1a;
+}
+.wadah nav.bawah div.burger span:nth-child(2) {
+  width: 17px;
+}
+.wadah nav.bawah div.burger span:last-child {
+  width: 23px;
+}
+.wadah nav.bawah div.burger input[type=checkbox]:checked ~ span:nth-child(2) {
+  width: 28px;
+}
+.wadah nav.bawah div.burger input[type=checkbox]:checked ~ span:last-child {
+  width: 28px;
+}
+.wadah nav.bawah aside.kiri ul {
+  left: 5%;
+  width: 90vw;
+  height: 90vh;
+  bottom: 9%;
+  z-index: 4 !important;
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  transform: translateX(-110%);
+  transition: all 800ms ease;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #474747;
+}
+.wadah nav.bawah aside.kiri ul.geser {
+  opacity: 1;
+  transform: translateX(0);
+}
+.wadah nav.bawah aside.kiri ul li a {
+  width: 90vw;
+  color: #848484;
+  height: 10vh;
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  letter-spacing: 3px;
+  justify-content: center;
+}
+.wadah nav.bawah aside.kiri ul li a:hover {
+  color: #ddd;
+  font-weight: 500;
+  background-color: #848484;
+}
+.wadah nav.bawah aside.kiri ul li footer h6 {
+  color: #666;
+  cursor: default;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+.wadah nav.bawah div.pembungkusPencarian {
+  left: 1%;
+  margin: auto;
+  z-index: 3 !important;
+  position: relative;
+}
+.wadah nav.bawah div.pembungkusPencarian section.pencarian {
+  width: 100%;
+  /* background: white; */
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.wadah nav.bawah div.pembungkusPencarian section.pencarian input[type=search] {
+  color: white;
+  width: 240px;
+  height: 32px;
+  cursor: not-allowed;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  font-size: 18px;
+  box-shadow: 0 1px 1px 1px rgba(221, 221, 221, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+}
+.wadah nav.bawah div.pembungkusPencarian section.pencarian input[type=search]::placeholder {
+  color: #ddd;
+  text-align: center;
+}
+.wadah nav.bawah section.masuk {
+  right: 3%;
+  z-index: 3 !important;
+  position: relative;
+}
+.wadah nav.bawah section.masuk button {
+  border: none;
+  font-size: 1em;
+  box-shadow: 0 1px 1px 1px rgba(221, 221, 221, 0.4);
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+.wadah nav.bawah section.masuk button:hover {
+  cursor: default;
+  background-color: #474747;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.wadah nav.bawah section.masuk button a[href="/SignIn"] {
+  color: white;
+  padding: 5px;
+}
+.wadah nav.bawah section.masuk button a[href="/SignIn"]:hover {
+  color: #ddd;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.wadah nav.bawah section.keluar {
+  right: 3%;
+  z-index: 3 !important;
+  position: relative;
+}
+.wadah nav.bawah section.keluar button {
+  border: none;
+  font-size: 1em;
+  box-shadow: 0 1px 1px 1px rgba(221, 221, 221, 0.4);
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+.wadah nav.bawah section.keluar button:hover {
+  cursor: default;
+  background-color: #474747;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.wadah nav.bawah section.keluar button a[href="/"] {
+  color: white;
+  padding: 5px;
+}
+.wadah nav.bawah section.keluar button a[href="/"]:hover {
+  color: #ddd;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.wadah main.kemas section.beranda {
+  display: grid;
+  justify-items: center;
+}
+.wadah main.kemas section.beranda article {
+  order: 1;
+  color: white;
+  cursor: default;
+  padding: 3%;
+  text-align: justify;
+}
+.wadah main.kemas section.beranda article h1 {
+  font-size: 2em;
+}
+.wadah main.kemas section.beranda article p {
+  margin: 14% 0 18%;
+}
+.wadah main.kemas section.beranda a[href="/About"] img.gambarProfil {
+  left: 2.8%;
+  width: 5%;
+  margin: 1% 3%;
+  bottom: 8.8%;
+  border: solid 2.3px black;
+  z-index: 1 !important;
+  position: absolute;
+  border-radius: 50%;
+}
+.wadah main.kemas section.beranda a[href="/About"] h6 {
+  left: 6%;
+  color: white;
+  bottom: 9.85%;
+  padding: 0.6% 2.4% 0 8.4%;
+  position: absolute;
+  font-size: 0.8em;
+  border-radius: 50px;
+  background-color: #1a1a1a;
+}
+.wadah main.kemas section.beranda a[href="/About"] h6:hover {
+  cursor: pointer;
+  background-image: linear-gradient(transparent, deepskyblue);
+}
+.wadah main.kemas section.beranda a[href="/Product"] {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+}
+.wadah main.kemas section.beranda a[href="/Product"] img.gambarProduk {
+  width: 100%;
+}
+.wadah main.kemas section.produk {
+  display: grid;
+  justify-items: center;
+}
+.wadah main.kemas section.produk h3, .wadah main.kemas section.produk h6 {
+  order: 1;
+  cursor: default;
+}
+.wadah main.kemas section.produk h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.produk h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.produk article {
+  color: white;
+  order: 2;
+  cursor: default;
+  padding: 3%;
+  text-align: justify;
+}
+.wadah main.kemas section.produk article h1 {
+  margin: 4% auto;
+  font-size: 2em;
+}
+.wadah main.kemas section.produk article p {
+  padding: 0 0 18%;
+}
+.wadah main.kemas section.produk a[href="/"] img.gambarProfil {
+  border: solid 5px black;
+  border-radius: 50%;
+}
+.wadah main.kemas section.produk a[href="/"] img.gambarProduk {
+  width: 100%;
+}
+.wadah main.kemas section.tentang {
+  display: grid;
+  justify-items: center;
+}
+.wadah main.kemas section.tentang h3, .wadah main.kemas section.tentang h6 {
+  order: 1;
+  cursor: default;
+}
+.wadah main.kemas section.tentang h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.tentang h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.tentang article {
+  color: white;
+  order: 2;
+  cursor: default;
+  padding: 3%;
+  text-align: justify;
+}
+.wadah main.kemas section.tentang article h1 {
+  margin: 4% auto;
+  font-size: 2em;
+}
+.wadah main.kemas section.tentang article p {
+  padding: 0 0 18%;
+}
+.wadah main.kemas section.tentang article a[href="/"] img.gambarProfil {
+  border: solid 5px black;
+  border-radius: 50%;
+}
+.wadah main.kemas section.tentang article a[href="/"] img.gambarTron {
+  width: 100%;
+}
+.wadah main.kemas section.masuk {
+  width: 93.8vw;
+  height: 56.4vh;
+  margin: 30% auto;
+  padding: 3%;
+  display: flex;
+  box-shadow: 0 1px 1px 1px rgba(221, 221, 221, 0.4);
+  align-items: center;
+  border-radius: 3%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #474747;
+}
+.wadah main.kemas section.masuk h1, .wadah main.kemas section.masuk h5 {
+  color: white;
+}
+.wadah main.kemas section.masuk h1 {
+  cursor: default;
+  font-size: 2.8em;
+}
+.wadah main.kemas section.masuk form ul li {
+  display: flex;
+  justify-content: flex-end;
+}
+.wadah main.kemas section.masuk form ul li label {
+  cursor: pointer;
+  margin: 0 0 4.6vh;
+}
+.wadah main.kemas section.masuk form ul li label h5 {
+  font-size: medium;
+  font-weight: 500;
+}
+.wadah main.kemas section.masuk form ul li label input {
+  width: 64.8vw;
+  margin: 1vh auto 0;
+  height: 4.8vh;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1.125em;
+  border-radius: 5px;
+  background-color: white;
+}
+.wadah main.kemas section.masuk form ul li label input::placeholder {
+  color: rgba(26, 26, 26, 0.2784313725);
+  font-size: 0.8em;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 1.8px;
+}
+.wadah main.kemas section.masuk form ul li button[type=submit] {
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 1.1em;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+.wadah main.kemas section.masuk form ul li button[type=submit]:hover {
+  color: #ddd;
+  cursor: pointer;
+  background-color: #727272;
+}
+.wadah main.kemas section.videografi {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.videografi h3, .wadah main.kemas section.videografi h5, .wadah main.kemas section.videografi h6 {
+  color: white;
+}
+.wadah main.kemas section.videografi h3, .wadah main.kemas section.videografi h6 {
+  cursor: default;
+}
+.wadah main.kemas section.videografi h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.videografi h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.videografi section.daftarVideos {
+  padding: 3%;
+}
+.wadah main.kemas section.videografi section.daftarVideos ul {
+  padding: 0 0 13%;
+}
+.wadah main.kemas section.videografi section.daftarVideos ul li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.videografi section.daftarVideos ul li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.videografi section.daftarVideos ul li a[href="/"] img.videoThumbs {
+  width: 100%;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.videografi section.daftarVideos ul li a[href="/"] h5.judulVideos {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: justify;
+}
+.wadah main.kemas section.diskografi {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.diskografi h3, .wadah main.kemas section.diskografi h5, .wadah main.kemas section.diskografi h6 {
+  color: white;
+}
+.wadah main.kemas section.diskografi h3, .wadah main.kemas section.diskografi h6 {
+  cursor: default;
+}
+.wadah main.kemas section.diskografi h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.diskografi h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums {
+  padding: 3%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums ul {
+  padding: 0 0 13%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums ul li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums ul li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums ul li a[href="/"] img.coverAlbums {
+  width: 100%;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.diskografi section.daftarAlbums ul li a[href="/"] h5.albumTitles {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: justify;
+}
+.wadah main.kemas section.toko {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.toko h3, .wadah main.kemas section.toko h5, .wadah main.kemas section.toko h6 {
+  color: white;
+}
+.wadah main.kemas section.toko h3, .wadah main.kemas section.toko h6 {
+  cursor: default;
+}
+.wadah main.kemas section.toko h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.toko h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.toko section.daftarStore {
+  padding: 3%;
+}
+.wadah main.kemas section.toko section.daftarStore ul {
+  padding: 0 0 13%;
+}
+.wadah main.kemas section.toko section.daftarStore ul li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.toko section.daftarStore ul li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.toko section.daftarStore ul li a[href="/"]:hover {
+  background-color: #474747;
+}
+.wadah main.kemas section.toko section.daftarStore ul li a[href="/"] img.storeLogos {
+  width: 78%;
+  border: 5px solid #1a1a1a;
+  border-radius: 50%;
+}
+.wadah main.kemas section.toko section.daftarStore ul li a[href="/"] h5.tokoNames {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: center;
+}
+.wadah main.kemas section.main {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.main h3, .wadah main.kemas section.main h5, .wadah main.kemas section.main h6 {
+  color: white;
+}
+.wadah main.kemas section.main h3, .wadah main.kemas section.main h6 {
+  cursor: default;
+}
+.wadah main.kemas section.main h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.main h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.main section.daftarPermainan {
+  padding: 3%;
+}
+.wadah main.kemas section.main section.daftarPermainan ul {
+  padding: 0 0 13%;
+}
+.wadah main.kemas section.main section.daftarPermainan ul li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.main section.daftarPermainan ul li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.main section.daftarPermainan ul li a[href="/"]:hover {
+  background-color: #474747;
+}
+.wadah main.kemas section.main section.daftarPermainan ul li a[href="/"] img.playPictures {
+  width: 78%;
+  border-radius: 50%;
+}
+.wadah main.kemas section.main section.daftarPermainan ul li a[href="/"] h5.namaGames {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: center;
+}
+.wadah main.kemas section.pedoman {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.pedoman h3, .wadah main.kemas section.pedoman h5, .wadah main.kemas section.pedoman h6 {
+  color: white;
+}
+.wadah main.kemas section.pedoman h3, .wadah main.kemas section.pedoman h6 {
+  cursor: default;
+}
+.wadah main.kemas section.pedoman h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.pedoman h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.pedoman section.arahan {
+  padding: 3%;
+}
+.wadah main.kemas section.pedoman section.arahan ul {
+  padding: 0 0 13%;
+}
+.wadah main.kemas section.pedoman section.arahan ul li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.pedoman section.arahan ul li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.pedoman section.arahan ul li a[href="/"] img.partAnalytics {
+  width: 100%;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.pedoman section.arahan ul li a[href="/"] h5.namaParts {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */

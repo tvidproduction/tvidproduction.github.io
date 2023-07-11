@@ -1,0 +1,52 @@
+.kemas section.diskografi {
+    display: grid;
+    justify-items: stretch;
+}
+
+.kemas section.diskografi section.daftarAlbums {
+    padding: 3%;
+/*    text-align: justify;*/
+}
+
+.kemas section.diskografi section.daftarAlbums ul {
+    padding: 0 0 13%;
+}
+
+.kemas section.diskografi section.daftarAlbums ul li {
+    margin-bottom: 5%;
+}
+
+.kemas section.diskografi section.daftarAlbums ul li a {
+    color: #ddd;
+    text-align: center;
+/*    background-color: black;*/
+    border-radius: 1.8%;
+}
+.kemas section.diskografi section.daftarAlbums ul li a:hover {
+/*    background-color: #474747;*/
+}
+
+.kemas section.diskografi section.daftarAlbums ul li a img.coverAlbums {
+    width: 100%;
+    border-radius: 1.8%;
+}
+.kemas section.diskografi section.daftarAlbums ul li a h5.albumTitles {
+    text-align: justify;
+    font-size: 1em;
+    margin: 1.8% 0;
+}
+
+.kemas section.diskografi h5, h3, h6 {
+    color: white;
+}
+
+.kemas section.diskografi h3 {
+    font-size: 2em;
+    margin: 4% auto 2%;
+}
+.kemas section.diskografi h6 {
+    margin: 0 auto 6%;
+}
+.kemas section.diskografi h3, h6 {
+    cursor: default;
+}

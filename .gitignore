@@ -40,27 +40,24 @@ $RECYCLE.BIN/
 # Web workbench (sass)
 .sass-cache/
 
-# IGNORE oleh TVID Developments
-/Aset/Gaya/style.css.map
-/Aset/SASS
-/Aset/Gaya
-/Aset/Fungsi
-
-# Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore
-/node_modules
-#.gitignore
-
-# Sementara
-# /Aset
+### IGNORE oleh TVID Developments Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore ###
+/About/index1.html
+/Aset/_Fungsi
+/Aset/_Gaya
+/Aset/_SASS
+/Aset/data
+# /Aset/Gaya/style.css.map
 /Discography/index1.html
-/Masuk/index1.html
-/Play
-/Produk
-/Store
-/Tentang
+/node_modules
+/Play/Games
+/Play/index1.html
+/Product/index1.html
+/SignIn/index1.html
+/Store/index1.html
 /Videography/index1.html
-
-.gitattributes
+# .gitattributes
+# .gitignore
+_contekan.txt
 index1.html
 konfigurasi-antarmuka.js
 package-lock.json

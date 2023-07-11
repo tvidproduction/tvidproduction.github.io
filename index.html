@@ -12,230 +12,7 @@
         content="TVID Production, TVID Records, TVID Pictures, TVID Store, TVID Developments, TVID Plays">
     <!-- Akhir Metadata -->
     <link rel="icon" type="image/x-icon" href="Aset/TVID-Favicon.png">
-    <style>
-        * {
-/*            border: solid red 1px;*/
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        ul, ol, li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            display: block;
-        }
-
-        .wadah {
-            display: grid;
-            background-color: #848484;
-            overflow-x: hidden;
-            font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
-            letter-spacing: 1px;
-            background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
-        }
-
-        nav {
-            bottom: 0;
-            width: 100vw;
-            height: 7vh;
-            z-index: 2;
-            display: flex;
-            position: fixed;
-            background-color: #666;
-            align-items: center;
-        }
-
-/*        Style Burger Bar*/
-        nav .burger {
-            left: 3%;
-            height: 20px;
-            z-index: 5;
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        nav .burger input {
-            top: -4px;
-            width: 28px;
-            height: 28px;
-            cursor: pointer;
-            opacity: 0;
-            position: absolute;
-        }
-        nav .burger span {
-            width: 28px;
-            height: 3px;
-            transition: all 500ms ease-in-out;
-            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
-            border-radius: 3px;
-            background-color: #1a1a1a;
-        }
-        nav .burger span:nth-child(2) {
-            width: 17px;
-        }
-        nav .burger span:last-child {
-            width: 23px;
-        }
-        nav .burger input:checked~span:nth-child(2) {
-            width: 28px;
-        }
-        nav .burger input:checked~span:last-child {
-            width: 28px;
-        }
-/*        Akhir Style Burger Bar*/
-
-/*        Style Daftar Menu Kiri*/
-        ul {
-            left: 5%;
-            bottom: 9%;
-            flex-wrap: wrap;
-            border-radius: 5px;
-            width: 90vw;
-            height: 90vh;
-            z-index: 4;
-            display: flex;
-            position: fixed;
-            transform: translateX(-110%);
-            transition: all 800ms ease;
-            align-content: center;
-            flex-direction: column;
-            justify-content: space-evenly;
-            background-color: #474747;
-            box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .5);
-        }
-        ul.geser {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        ul li a {
-            width: 90vw;
-            color: #848484;
-            height: 10vh;
-            display: flex;
-            font-weight: 300;
-            align-items: center;
-            letter-spacing: 3px;
-            justify-content: center;
-        }
-        ul li a:hover {
-            color: #ddd;
-            font-weight: 500;
-            background-color: #848484;
-        }
-        li footer h6 {
-            text-align: center;
-            color: #666;
-            cursor: default;
-            font-weight: 100;
-            letter-spacing: 3px;
-        }
-/*        Akhir Style Daftar Menu Kiri*/
-
-/*        Style Kolom Pencarian*/
-        nav .pembungkusPencarian {
-/*            display: none;*/
-            position: relative;
-            z-index: 3;
-            margin: auto;
-            left: 1%;
-        }
-        nav .pembungkusPencarian section.pencarian {
-            width: 100%;
-/*            background: white;*/
-            border-radius: 5px;
-            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
-        }
-        nav .pembungkusPencarian section.pencarian input {
-            width: 240px;
-            height: 32px;
-            border: none;
-            padding: 0 10px;
-            outline: none;
-            font-size: 18px;
-            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
-            border-radius: 5px;
-            background-color: transparent;
-            color: white;
-            cursor: not-allowed;
-        }
-        nav .pembungkusPencarian section.pencarian input::placeholder {
-            text-align: center;
-            color: #ddd;
-        }
-        nav .pembungkusPencarian section.pencarian section.daftarPencarian {
-            display: none;
-        }
-/*        Akhir Style Kolom Pencarian*/
-
-/*        Style Tombol Masuk*/
-        nav section.masuk {
-            right: 3%;
-            z-index: 3;
-            position: relative;
-        }
-        nav section.masuk button {
-            border: none;
-            font-size: 1em;
-            box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
-            border-radius: 5px;
-            background-color: #1a1a1a;
-        }
-        nav section.masuk button:hover {
-            cursor: default;
-            background-color: #474747;
-            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
-        }
-        nav section.masuk button a {
-            color: white;
-            padding: 5px;
-        }
-        nav section.masuk button a:hover {
-            color: #ddd;
-            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
-        }
-/*        Akhir Style Tombol Masuk*/
-
-        .beranda {
-            display: grid;
-            justify-items: center;
-        }
-
-        article {
-            color: white;
-            cursor: default;
-            padding: 3%;
-            text-align: justify;
-            order: 1;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin: 4% auto;
-        }
-
-        p {
-            padding: 0 0 18%;
-        }
-
-        img.gambarProfil {
-            border: solid 5px black;
-            border-radius: 50%;
-            display: none;
-        }
-
-        img.gambarProduk {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="Aset/Gaya/style.css">
     <title>[ Beranda ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
 </head>
 
@@ -312,7 +89,7 @@
             <section class="pencarian" title="Kolom Pencarian">
                 <!-- <label for="kolomPencarian"></label> -->
                 <input type="search" id="kolomPencarian" placeholder="Telusuri" maxlength="30" autocomplete="off" autofocus readonly>
-                <section class="daftarPencarian">
+                <section class="daftarPencarian tersembunyi">
                     <li>
                         <span>
                             <a href="/">
@@ -339,7 +116,7 @@
         <!-- <section class="masuk" alt="Tombol Masuk" title="Masuk"> -->
             <button>
             <!-- <button disabled> -->
-                <a href="/Masuk">Masuk</a>
+                <a href="/SignIn">Masuk</a>
                 <!-- <a href="/Masuk" rel="nofollow">Masuk</a> -->
             </button>
         </section>
@@ -364,11 +141,12 @@
             </article>
 
             <!-- <figure> -->
-            <a href="/Tentang" target="_blank">
+            <a href="/About" target="_blank">
                 <img src="Aset/Gambar/Profile Picture TVID.jpg" alt="Gambar Profil" title="Gambar Profil TVID Production" class="gambarProfil" width="380" loading="lazy">
+                <h6>TVID Production</h6>
             </a>
 
-            <a href="/Produk">
+            <a href="/Product">
                 <img src="Aset/Gambar/Antlia Cover.jpg" alt="Gambar Produk" title="Gambar Produk TVID Store" class="gambarProduk" data-tilt width="380" loading="lazy">
             </a>
             <!-- </figure> -->
@@ -376,22 +154,7 @@
         <!-- Akhir Isi Konten -->
     </main>
     <!-- Akhir Pembungkus Untuk Konten -->
-    <script>
-        // Menu Geser
-        const menu = document.querySelector('.burger input')
-        const navigasi = document.querySelector('nav ul')
-
-        menu.addEventListener('click', ()=>{
-            navigasi.classList.toggle('geser')
-        })
-        // Akhir Menu Geser
-
-        // Footer Waktu[Tahun]
-        const isiDengan = new Date()
-
-        document.getElementById('waktu').innerHTML = isiDengan.getFullYear()
-        // Akhir Footer Waktu[Tahun]
-    </script>
+    <script src="Aset/script.js" type="module"></script>
 </body>
 
 </html>

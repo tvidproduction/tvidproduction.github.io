@@ -1,0 +1,74 @@
+.kemas section.masuk {
+/*    width: 450px;*/
+    width: 93.8vw;
+/*    height: 400px;
+    height: 54.62154vh;*/
+    height: 56.4vh;
+/*    margin: auto;*/
+    margin: 30% auto;
+    background-color: #474747;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3%;
+    box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+    border-radius: 3%;
+}
+.kemas section.masuk>h1, h5 {
+    color: white;
+}
+.kemas section.masuk h1 {
+    cursor: default;
+/*    text-align: center;
+    font-size: 2em;*/
+    font-size: 2.8em;
+}
+.kemas section.masuk form ul li {
+    display: flex;
+    justify-content: flex-end;
+}
+.kemas section.masuk form ul li label {
+    cursor: pointer;
+    margin: 0 0 4.6vh;
+}
+.kemas section.masuk form ul li label h5 {
+    font-size: medium;
+    font-weight: 500;
+}
+.kemas section.masuk form ul li label input {
+/*    width: 280px;*/
+    width: 64.8vw;
+/*    margin: 12px auto 48px;*/
+    margin: 1vh auto 0;
+/*    height: 32px;*/
+    height: 4.8vh;
+    border: none;
+    outline: none;
+    padding: 10px;
+/*    font-size: 18px;*/
+    font-size: 1.125em;
+    background-color: white;
+    border-radius: 5px;
+}
+.kemas section.masuk form ul li label input::placeholder {
+    font-weight: 100;
+    letter-spacing: 1.8px;
+    color: #1a1a1a47;
+    font-size: .8em;
+    text-align: center;
+}
+.kemas section.masuk form ul li button[type="submit"] {
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 1.1em;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+}
+.kemas section.masuk form ul li button[type="submit"]:hover {
+    color: #ddd;
+    cursor: pointer;
+    background-color: #727272;
+}

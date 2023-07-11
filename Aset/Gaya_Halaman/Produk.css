@@ -1,0 +1,41 @@
+.kemas section.produk {
+    display: grid;
+    justify-items: center;
+}
+
+.kemas section.produk h3 {
+    font-size: 2em;
+    margin: 4% auto 2%;
+}
+.kemas section.produk h6 {
+    margin: 0 auto 6%;
+}
+.kemas section.produk h3, h6 {
+    order: 1;
+    cursor: default;
+}
+
+.kemas section.produk article {
+    color: white;
+    cursor: default;
+    padding: 3%;
+    text-align: justify;
+    order: 2;
+}
+
+.kemas section.produk article h1 {
+    font-size: 2em;
+    margin: 4% auto;
+}
+.kemas section.produk article p {
+    padding: 0 0 18%;
+}
+
+.kemas section.produk a img.gambarProfil {
+    border: solid 5px black;
+    border-radius: 50%;
+    display: none;
+}
+.kemas section.produk a img.gambarProduk {
+    width: 100%;
+}

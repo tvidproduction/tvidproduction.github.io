@@ -1,0 +1,56 @@
+.kemas section.main {
+    display: grid;
+    justify-items: stretch;
+}
+
+.kemas section.main section.daftarPermainan {
+    padding: 3%;
+/*            text-align: justify;*/
+}
+
+.kemas section.main section.daftarPermainan ul {
+    padding: 0 0 13%;
+}
+
+.kemas section.main section.daftarPermainan ul li {
+    margin-bottom: 5%;
+}
+
+.kemas section.main section.daftarPermainan ul li a {
+    color: #ddd;
+    text-align: center;
+/*            background-color: black;*/
+    border-radius: 1.8%;
+}
+.kemas section.main section.daftarPermainan ul li a:hover {
+    background-color: #474747;
+}
+/*Niatnya Mau di Kasih Border Pas Lagi di Hover*/
+.kemas section.main section.daftarPermainan ul li a:hover~img.playPictures {
+    border: 5px solid #1a1a1a;
+}
+
+.kemas section.main section.daftarPermainan ul li a img.playPictures {
+    width: 78%;
+    border-radius: 50%;
+}
+.kemas section.main section.daftarPermainan ul li a h5.namaGames {
+    text-align: center;
+    font-size: 1em;
+    margin: 1.8% 0;
+}
+
+.kemas section.main h5, h3, h6 {
+    color: white;
+}
+
+.kemas section.main h3 {
+    font-size: 2em;
+    margin: 4% auto 2%;
+}
+.kemas section.main h6 {
+    margin: 0 auto 6%;
+}
+.kemas section.main h3, h6 {
+    cursor: default;
+}

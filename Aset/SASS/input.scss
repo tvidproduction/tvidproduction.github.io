@@ -1,0 +1,798 @@
+// Contekan CLI : sass sass/input.scss gaya/style.css -w
+// Root
+$Colors-ID: (
+    Play		: #1a1a1a,
+    Hover		: #727272,
+    Footer		: #666,
+    Tombol		: #ddd,
+    Magnet		: #474747,
+    Background	: #848484
+);
+
+$Indexes-ID: (
+    Tingkat-Dasar       : 0 !important,
+    Tingkat-Pertama     : 1 !important,
+    Tingkat-Kedua       : 2 !important,
+    Tingkat-Ketiga      : 3 !important,
+    Tingkat-Keempat     : 4 !important,
+    Tingkat-Kelima      : 5 !important,
+    Tingkat-Keenam      : 6 !important,
+    Tingkat-Ketujuh     : 7 !important,
+    Tingkat-Kedelapan   : 8 !important,
+    Tingkat-Kesembilan  : 9 !important
+);
+// Akhir Kode Root
+
+// Reset Style
+* {
+	// border: solid red 1px;  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    // color: map-get($Colors-ID, Play);
+    display: block;
+    text-decoration: none;
+}
+
+.tersembunyi {
+    display: none;
+}
+
+.wadah {
+    // color: black; */
+    // height: 100vh; */
+    display: grid;
+    overflow-x: hidden;
+    font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+    letter-spacing: 1px;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+    background-color: map-get($Colors-ID, Background);
+}
+// Akhir Kode Reset Style
+
+// Memberikan Gaya
+// Untuk MediaQuery Max-Width : 450px / Mobile Phones
+.wadah {
+	// Untuk Menu
+	nav.bawah {
+		width: 100vw;
+		height: 7vh;
+		bottom: 0;
+		z-index: map-get($Indexes-ID, Tingkat-Kedua);
+		display: flex;
+		position: fixed;
+		align-items: center;
+		background-color: map-get($Colors-ID, Footer);
+
+		// Untuk Burger Bar
+		div.burger {
+			left: 3%;
+			height: 20px;
+			z-index: map-get($Indexes-ID, Tingkat-Kelima);
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			justify-content: space-between;
+
+			input[type="checkbox"] {
+				top: -4px;
+				width: 28px;
+				height: 28px;
+				cursor: pointer;
+				opacity: 0;
+				position: absolute;
+			}
+
+			span {
+				width: 28px;
+				height: 3px;
+				transition: all 500ms ease-in-out;
+				box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+				border-radius: 3px;
+				background-color: map-get($Colors-ID, Play);
+			}
+			span:nth-child(2) {
+				width: 17px;
+			}
+			span:last-child {
+				width: 23px;
+			}
+
+			input[type="checkbox"]:checked~span:nth-child(2) {
+				width: 28px;
+			}
+			input[type="checkbox"]:checked~span:last-child {
+				width: 28px;
+			}
+		}
+		// Akhir Kode Untuk Burger Bar
+
+		// Untuk Menu KIri
+		aside.kiri ul {
+			left: 5%;
+			width: 90vw;
+			height: 90vh;
+			bottom: 9%;
+			z-index: map-get($Indexes-ID, Tingkat-Keempat);
+			display: flex;
+			position: fixed;
+			flex-wrap: wrap;
+			transform: translateX(-110%);
+			transition: all 800ms ease;
+			box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .5);
+			border-radius: 5px;
+			align-content: center;
+			flex-direction: column;
+			justify-content: space-evenly;
+			background-color: map-get($Colors-ID, Magnet);
+			&.geser {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			li {
+				a {
+					width: 90vw;
+					color: map-get($Colors-ID, Background);
+					height: 10vh;
+					display: flex;
+					font-weight: 300;
+					align-items: center;
+					letter-spacing: 3px;
+					justify-content: center;
+					&:hover {
+						color: map-get($Colors-ID, Tombol);
+						font-weight: 500;
+						background-color: map-get($Colors-ID, Background);
+					}
+				}
+
+				footer {
+					h6 {
+						color: map-get($Colors-ID, Footer);
+						cursor: default;
+						text-align: center;
+						font-weight: 100;
+						letter-spacing: 3px;
+					}
+				}
+			}
+		}
+		// Akhir Kode Untuk Menu KIri
+
+		// Untuk Kolom Pencarian
+		div.pembungkusPencarian {
+			left: 1%;
+			margin: auto;
+			z-index: map-get($Indexes-ID, Tingkat-Ketiga);
+			position: relative;
+
+			section.pencarian {
+			    width: 100%;
+				/* background: white; */
+			    border-radius: 5px;
+			    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+
+			    input[type="search"] {
+			    	color: white;
+			    	width: 240px;
+			    	height: 32px;
+			    	cursor: not-allowed;
+			    	border: none;
+			    	padding: 0 10px;
+			    	outline: none;
+			    	font-size: 18px;
+			    	box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+			    	border-radius: 5px;
+			    	background-color: transparent;
+			    	&::placeholder {
+			    		color: map-get($Colors-ID, Tombol);
+			    		text-align: center;
+			    	}
+			    }
+
+			    section.daftarPencarian {
+			    	// display: none;
+			    }
+			}
+		}
+		// Akhir Kode Untuk Kolom Pencarian
+
+		// Untuk Tombol Masuk
+		section.masuk {
+			right: 3%;
+			z-index: map-get($Indexes-ID, Tingkat-Ketiga);
+			position: relative;
+
+			button {
+				border: none;
+				font-size: 1em;
+				box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+				border-radius: 5px;
+				background-color: map-get($Colors-ID, Play);
+				&:hover {
+					cursor: default;
+					background-color: map-get($Colors-ID, Magnet);
+					box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+				}
+
+				a[href="/SignIn"] {
+					color: white;
+					padding: 5px;
+					&:hover {
+						color: map-get($Colors-ID, Tombol);
+						box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+					}
+				}
+			}
+		}
+		// Akhir Kode Untuk Tombol Masuk
+
+		// Untuk Tombol Keluar
+		section.keluar {
+			right: 3%;
+			z-index: map-get($Indexes-ID, Tingkat-Ketiga);
+			position: relative;
+
+			button {
+				border: none;
+				font-size: 1em;
+				box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+				border-radius: 5px;
+				background-color: map-get($Colors-ID, Play);
+				&:hover {
+					cursor: default;
+					background-color: map-get($Colors-ID, Magnet);
+					box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+				}
+
+				a[href="/"] {
+					color: white;
+					padding: 5px;
+					&:hover {
+						color: map-get($Colors-ID, Tombol);
+						box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+					}
+				}
+			}
+		}
+		// Akhir Kode Untuk Tombol Keluar
+	}
+	// Akhir Kode Untuk Menu
+
+	// Untuk Konten
+	main.kemas {
+		// Untuk Halaman Beranda
+		section.beranda {
+			display: grid;
+			justify-items: center;
+
+			article {
+				order: 1;
+				color: white;
+				cursor: default;
+				padding: 3%;
+				text-align: justify;
+
+				h1 {
+					font-size: 2em;
+				}
+
+				p {
+					margin: 14% 0 18%;
+				}
+			}
+
+			a[href="/About"] {
+				img.gambarProfil {
+					left: 2.8%;
+					width: 5%;
+					margin: 1% 3%;
+					bottom: 8.8%;
+					border: solid 2.3px black;
+					z-index: map-get($Indexes-ID, Tingkat-Pertama);
+					position: absolute;
+					border-radius: 50%;
+				}
+
+				h6 {
+					left: 6%;
+					color: white;
+					bottom: 9.85%;
+					padding: .6% 2.4% 0 8.4%;
+					position: absolute;
+					font-size: .8em;
+					border-radius: 50px;
+					background-color: #1a1a1a;
+					&:hover {
+						cursor: pointer;
+						background-image: linear-gradient(transparent, deepskyblue);
+					}
+				}
+			}
+
+			a[href="/Product"] {
+				background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+
+				img.gambarProduk {
+					width: 100%;
+				}
+			}
+		}
+		// Akhir Kode Untuk Halaman Beranda
+
+		// Untuk Halaman Produk
+		section.produk {
+			display: grid;
+			justify-items: center;
+
+			h3, h6 {
+				order: 1;
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			article {
+				color: white;
+				order: 2;
+				cursor: default;
+				padding: 3%;
+				text-align: justify;
+
+				h1 {
+					margin: 4% auto;
+					font-size: 2em;
+				}
+
+				p {
+					padding: 0 0 18%;
+				}
+			}
+
+			a[href="/"] {
+				img.gambarProfil {
+					border: solid 5px black;
+					// display: none;
+					border-radius: 50%;
+				}
+				img.gambarProduk {
+					width: 100%;
+				}
+			}
+		}
+		// Akhir Kode Untuk Halaman Produk
+
+		// Untuk Halaman Tentang
+		section.tentang {
+			display: grid;
+			justify-items: center;
+
+			h3, h6 {
+				order: 1;
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			article {
+				color: white;
+				order: 2;
+				cursor: default;
+				padding: 3%;
+				text-align: justify;
+
+				h1 {
+					margin: 4% auto;
+					font-size: 2em;
+				}
+
+				p {
+					padding: 0 0 18%;
+				}
+
+			a[href="/"] {
+				img.gambarProfil {
+					border: solid 5px black;
+					// display: none;
+					border-radius: 50%;
+				}
+				img.gambarTron {
+					width: 100%;
+				}
+			}
+			}
+		}
+		// Akhir Kode Untuk Halaman Tentang
+
+		// Untuk Halaman Masuk
+		section.masuk {
+				// width: 450px;
+			    width: 93.8vw;
+			    // height: 400px;
+			    // height: 54.62154vh;
+			    height: 56.4vh;
+				// margin: auto;
+			    margin: 30% auto;
+			    padding: 3%;
+			    display: flex;
+			    box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+			    align-items: center;
+			    border-radius: 3%;
+			    flex-direction: column;
+			    justify-content: space-evenly;
+			    background-color: map-get($Colors-ID, Magnet);
+
+			    h1, h5 {
+			    	color: white;
+			    }
+			    h1 {
+			    	    cursor: default;
+			    	    // text-align: center;
+			    	    // font-size: 2em;
+			    	    font-size: 2.8em;
+			    }
+
+			    form {
+			    	ul {
+			    		li {
+			    			display: flex;
+			    			justify-content: flex-end;
+
+			    			label {
+			    				cursor: pointer;
+			    				margin: 0 0 4.6vh;
+
+			    				h5 {
+			    					font-size: medium;
+			    					font-weight: 500;
+			    				}
+
+			    				input {
+			    					    // width: 280px;
+			    					    width: 64.8vw;
+			    					    // margin: 12px auto 48px;
+			    					    margin: 1vh auto 0;
+			    					    // height: 32px;
+			    					    height: 4.8vh;
+			    					    border: none;
+			    					    outline: none;
+			    					    padding: 10px;
+			    					    // font-size: 18px;
+			    					    font-size: 1.125em;
+			    					    border-radius: 5px;
+			    					    background-color: white;
+			    					    &::placeholder {
+			    					    	color: #1a1a1a47;
+			    					    	font-size: .8em;
+			    					    	text-align: center;
+			    					    	font-weight: 100;
+			    					    	letter-spacing: 1.8px;
+			    					    }
+			    				}
+			    			}
+
+			    			button[type="submit"] {
+			    				color: white;
+			    				border: none;
+			    				padding: 5px;
+			    				font-size: 1.1em;
+			    				box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+			    				border-radius: 5px;
+			    				background-color: map-get($Colors-ID, Play);
+			    				&:hover {
+			    					color: map-get($Colors-ID, Tombol);
+			    					cursor: pointer;
+			    					background-color: map-get($Colors-ID, Hover);
+			    				}
+			    			}
+			    		}
+			    	}
+			    }
+		}
+		// Akhir Kode Untuk Halaman Masuk
+
+		// Untuk Halaman Videografi
+		section.videografi {
+			display: grid;
+			justify-items: stretch;
+
+			h3, h5, h6 {
+				color: white;
+			}
+			h3, h6 {
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			section.daftarVideos {
+			    padding: 3%;
+			    // text-align: justify;
+
+			    ul {
+			    	padding: 0 0 13%;
+
+			    	li {
+			    		margin-bottom: 5%;
+
+			    		a[href="/"] {
+		    			    color: map-get($Colors-ID, Tombol);
+		    			    text-align: center;
+		    			    border-radius: 1.8%;
+		    			    // background-color: black;
+		    			    &:hover {
+	    			    	    // background-color: #474747;
+		    			    }
+
+		    			    img.videoThumbs {
+		    			    	width: 100%;
+		    			    	border-radius: 1.8%;
+		    			    }
+
+		    			    h5.judulVideos {
+		    			    	margin: 1.8% 0;
+		    			    	font-size: 1em;
+		    			    	text-align: justify;
+		    			    }
+			    		}
+			    	}
+			    }
+			}
+		}
+		// Akhir Kode Untuk Halaman Videografi
+
+		// Untuk Halaman Diskografi
+		section.diskografi {
+			display: grid;
+			justify-items: stretch;
+
+			h3, h5, h6 {
+				color: white;
+			}
+			h3, h6 {
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			section.daftarAlbums {
+			    padding: 3%;
+			    // text-align: justify;
+
+			    ul {
+			    	padding: 0 0 13%;
+
+			    	li {
+			    		margin-bottom: 5%;
+
+			    		a[href="/"] {
+		    			    color: map-get($Colors-ID, Tombol);
+		    			    text-align: center;
+		    			    border-radius: 1.8%;
+		    			    // background-color: black;
+		    			    &:hover {
+	    			    	    // background-color: #474747;
+		    			    }
+
+		    			    img.coverAlbums {
+		    			    	width: 100%;
+		    			    	border-radius: 1.8%;
+		    			    }
+
+		    			    h5.albumTitles {
+		    			    	margin: 1.8% 0;
+		    			    	font-size: 1em;
+		    			    	text-align: justify;
+		    			    }
+			    		}
+			    	}
+			    }
+			}
+		}
+		// Akhir Kode Untuk Halaman Diskografi
+
+		// Untuk Halaman Toko
+		section.toko {
+			display: grid;
+			justify-items: stretch;
+
+			h3, h5, h6 {
+				color: white;
+			}
+			h3, h6 {
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			section.daftarStore {
+			    padding: 3%;
+			    // text-align: justify;
+
+			    ul {
+			    	padding: 0 0 13%;
+
+			    	li {
+			    		margin-bottom: 5%;
+
+			    		a[href="/"] {
+		    			    color: map-get($Colors-ID, Tombol);
+		    			    text-align: center;
+		    			    border-radius: 1.8%;
+		    			    // background-color: black;
+		    			    &:hover {
+		    			    	background-color: map-get($Colors-ID, Magnet);
+		    			    }
+
+		    			    img.storeLogos {
+		    			    	width: 78%;
+		    			    	border: 5px solid map-get($Colors-ID, Play);
+		    			    	border-radius: 50%;
+		    			    }
+
+		    			    h5.tokoNames {
+		    			    	margin: 1.8% 0;
+		    			    	font-size: 1em;
+		    			    	text-align: center;
+		    			    }
+			    		}
+			    	}
+			    }
+			}
+		}
+		// Akhir Kode Untuk Halaman Toko
+
+		// Untuk Halaman Main
+		section.main {
+			display: grid;
+			justify-items: stretch;
+
+			h3, h5, h6 {
+				color: white;
+			}
+			h3, h6 {
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			section.daftarPermainan {
+			    padding: 3%;
+	            // text-align: justify;
+
+	            ul {
+	            	padding: 0 0 13%;
+
+	            	li {
+	            		margin-bottom: 5%;
+
+	            		a[href="/"] {
+            			    color: map-get($Colors-ID, Tombol);
+            			    text-align: center;
+            			    border-radius: 1.8%;
+    			            // background-color: black;
+    			            &:hover {
+    			            	background-color: #474747;
+    			            }
+    			            // Niatnya Mau di Kasih Border Pas Lagi di Hover
+    			            &:hover~img.playPictures {
+    			            	// border: 5px solid #1a1a1a;
+    			            }
+
+    			            img.playPictures {
+    			            	width: 78%;
+    			            	border-radius: 50%;
+    			            }
+
+    			            h5.namaGames {
+    			            	margin: 1.8% 0;
+    			            	font-size: 1em;
+    			            	text-align: center;
+    			            }
+	            		}
+	            	}
+	            }
+			}
+		}
+		// Akhir Kode Untuk Halaman Main
+
+		// Untuk Halaman Papan Instrumen
+		section.pedoman {
+			display: grid;
+			justify-items: stretch;
+
+			h3, h5, h6 {
+				color: white;
+			}
+			h3, h6 {
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			section.arahan {
+			    padding: 3%;
+			    // text-align: justify;
+
+			    ul {
+			    	padding: 0 0 13%;
+
+			    	li {
+			    		margin-bottom: 5%;
+
+			    		a[href="/"] {
+		    			    color: map-get($Colors-ID, Tombol);
+		    			    text-align: center;
+		    			    border-radius: 1.8%;
+		    			    // background-color: black;
+		    			    &:hover {
+	    			    	    // background-color: #474747;
+		    			    }
+
+		    			    img.partAnalytics {
+		    			    	width: 100%;
+		    			    	border-radius: 1.8%;
+		    			    }
+
+		    			    h5.namaParts {
+		    			    	margin: 1.8% 0;
+		    			    	font-size: 1em;
+		    			    	text-align: justify;
+		    			    }
+			    		}
+			    	}
+			    }
+			}
+		}
+		// Akhir Kode Untuk Halaman Papan Instrumen
+	}
+	// Akhir Kode Untuk Konten
+}
+// Akhir Kode Memberikan Gaya

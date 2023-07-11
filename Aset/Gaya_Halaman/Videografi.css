@@ -1,0 +1,53 @@
+.kemas section.videografi {
+    display: grid;
+    justify-items: stretch;
+}
+
+.kemas section.videografi section.daftarVideos {
+    padding: 3%;
+/*    text-align: justify;*/
+}
+
+.kemas section.videografi section.daftarVideos ul {
+    padding: 0 0 13%;
+}
+
+.kemas section.videografi section.daftarVideos ul li {
+    margin-bottom: 5%;
+}
+
+.kemas section.videografi section.daftarVideos ul li a {
+    color: #ddd;
+    text-align: center;
+/*    background-color: black;*/
+    border-radius: 1.8%;
+}
+
+.kemas section.videografi section.daftarVideos ul li a:hover {
+/*    background-color: #474747;*/
+}
+
+.kemas section.videografi section.daftarVideos ul li a img.videoThumbs {
+    width: 100%;
+    border-radius: 1.8%;
+}
+.kemas section.videografi section.daftarVideos ul li a h5.judulVideos {
+    text-align: justify;
+    font-size: 1em;
+    margin: 1.8% 0;
+}
+
+.kemas section.videografi h5, h3, h6 {
+    color: white;
+}
+
+.kemas section.videografi h3 {
+    font-size: 2em;
+    margin: 4% auto 2%;
+}
+.kemas section.videografi h6 {
+    margin: 0 auto 6%;
+}
+.kemas section.videografi h3, h6 {
+    cursor: default;
+}

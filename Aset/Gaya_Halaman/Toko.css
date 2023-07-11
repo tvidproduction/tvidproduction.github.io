@@ -1,0 +1,53 @@
+.kemas section.toko {
+    display: grid;
+    justify-items: stretch;
+}
+
+.kemas section.toko section.daftarStores {
+    padding: 3%;
+/*    text-align: justify;*/
+}
+
+.kemas section.toko section.daftarStores ul {
+    padding: 0 0 13%;
+}
+
+.kemas section.toko section.daftarStores ul li {
+    margin-bottom: 5%;
+}
+
+.kemas section.toko section.daftarStores ul li a {
+    color: #ddd;
+    text-align: center;
+/*    background-color: black;*/
+    border-radius: 1.8%;
+}
+.kemas section.toko section.daftarStores ul li a:hover {
+    background-color: #474747;
+}
+
+.kemas section.toko section.daftarStores ul li a img.logoStores {
+    width: 78%;
+    border-radius: 50%;
+    border: 5px solid #1a1a1a;
+}
+.kemas section.toko section.daftarStores ul li a h5.tokoNames {
+    text-align: center;
+    font-size: 1em;
+    margin: 1.8% 0;
+}
+
+.kemas section.toko h5, h3, h6 {
+    color: white;
+}
+
+.kemas section.toko h3 {
+    font-size: 2em;
+    margin: 4% auto 2%;
+}
+.kemas section.toko h6 {
+    margin: 0 auto 6%;
+}
+.kemas section.toko h3, h6 {
+    cursor: default;
+}

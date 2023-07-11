@@ -1,0 +1,162 @@
+/*Style Menu Untuk Tampilan Lebar-nya < 450px[Mobile Phone]*/
+.wadah nav.bawah {
+    bottom: 0;
+    width: 100vw;
+    height: 7vh;
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    background-color: #666;
+    align-items: center;
+}
+
+/*Style Burger Bar*/
+.bawah div.burger {
+    left: 3%;
+    height: 20px;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bawah div.burger input[type="checkbox"] {
+    top: -4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+.bawah div.burger span {
+    width: 28px;
+    height: 3px;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+    border-radius: 3px;
+    background-color: #1a1a1a;
+}
+.bawah div.burger span:nth-child(2) {
+    width: 17px;
+}
+.bawah div.burger span:last-child {
+    width: 23px;
+}
+.bawah div.burger input[type="checkbox"]:checked~span:nth-child(2) {
+    width: 28px;
+}
+.bawah div.burger input[type="checkbox"]:checked~span:last-child {
+    width: 28px;
+}
+/*Akhir Style Burger Bar*/
+
+/*Style Daftar Menu Kiri*/
+.bawah aside.kiri ul {
+    left: 5%;
+    bottom: 9%;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    width: 90vw;
+    height: 90vh;
+    z-index: 4;
+    display: flex;
+    position: fixed;
+    transform: translateX(-110%);
+    transition: all 800ms ease;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #474747;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .5);
+}
+.bawah aside.kiri ul.geser {
+    opacity: 1;
+    transform: translateX(0);
+}
+.bawah aside.kiri ul li a {
+    width: 90vw;
+    color: #848484;
+    height: 10vh;
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    letter-spacing: 3px;
+    justify-content: center;
+}
+.bawah aside.kiri ul li a:hover {
+    color: #ddd;
+    font-weight: 500;
+    background-color: #848484;
+}
+.bawah aside.kiri ul li footer h6 {
+    text-align: center;
+    color: #666;
+    cursor: default;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+/*Akhir Style Daftar Menu Kiri*/
+
+/*Style Kolom Pencarian*/
+.bawah div.pembungkusPencarian {
+/*    display: none;*/
+    position: relative;
+    z-index: 3;
+    margin: auto;
+    left: 1%;
+}
+.bawah div.pembungkusPencarian section.pencarian {
+    width: 100%;
+/*    background: white;*/
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+}
+.bawah div.pembungkusPencarian section.pencarian input[type="search"] {
+    width: 240px;
+    height: 32px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: not-allowed;
+}
+.bawah div.pembungkusPencarian section.pencarian input[type="search"]::placeholder {
+    text-align: center;
+    color: #ddd;
+}
+.bawah div.pembungkusPencarian section.pencarian section.daftarPencarian {
+    display: none;
+}
+/*Akhir Style Kolom Pencarian*/
+
+/*Style Tombol Masuk*/
+.bawah section.masuk {
+    right: 3%;
+    z-index: 3;
+    position: relative;
+}
+.bawah section.masuk button {
+    border: none;
+    font-size: 1em;
+    box-shadow: 0 1px 1px 1px rgba(221, 221, 221, .4);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+}
+.bawah section.masuk button:hover {
+    cursor: default;
+    background-color: #474747;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+}
+.bawah section.masuk button a[href="/SignIn"] {
+    color: white;
+    padding: 5px;
+}
+.bawah section.masuk button a[href="/SignIn"]:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+}
+/*Akhir Style Tombol Masuk*/
