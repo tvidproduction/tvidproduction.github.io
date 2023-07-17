@@ -42,6 +42,8 @@ $RECYCLE.BIN/
 
 ### IGNORE oleh TVID Developments Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore ###
 /About/index1.html
+/Account
+/Aset/Fungsi
 /Aset/_Fungsi
 /Aset/_Gaya
 /Aset/_SASS
@@ -51,16 +53,18 @@ $RECYCLE.BIN/
 /node_modules
 /Play/Games
 /Play/index1.html
+/Product/Invoice
 /Product/index1.html
 /SignIn/index1.html
+/Store/Profile
 /Store/index1.html
 /Videography/index1.html
+._package-lock.json
+._package.json
 # .gitattributes
 # .gitignore
 _contekan.txt
 index1.html
 konfigurasi-antarmuka.js
-package-lock.json
-package.json
 pengelola.js
 pengembang.js

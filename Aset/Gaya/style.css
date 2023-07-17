@@ -129,7 +129,6 @@ a {
 }
 .wadah nav.bawah div.pembungkusPencarian section.pencarian {
   width: 100%;
-  /* background: white; */
   border-radius: 5px;
   box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
 }
@@ -589,6 +588,183 @@ a {
   margin: 1.8% 0;
   font-size: 1em;
   text-align: justify;
+}
+.wadah main.kemas section.akun {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.akun h1, .wadah main.kemas section.akun h3, .wadah main.kemas section.akun h4, .wadah main.kemas section.akun h5, .wadah main.kemas section.akun h6, .wadah main.kemas section.akun p {
+  color: white;
+}
+.wadah main.kemas section.akun h1, .wadah main.kemas section.akun h3, .wadah main.kemas section.akun h4, .wadah main.kemas section.akun h6, .wadah main.kemas section.akun p {
+  cursor: default;
+}
+.wadah main.kemas section.akun h3, .wadah main.kemas section.akun h6 {
+  order: 2;
+  margin: 0 3%;
+}
+.wadah main.kemas section.akun h1 {
+  order: 1;
+  margin: -10% 0;
+  padding: 0 3%;
+  font-size: 2em;
+  font-weight: 600;
+}
+.wadah main.kemas section.akun h3 {
+  font-size: 1.17em;
+  font-weight: 400;
+}
+.wadah main.kemas section.akun h5 {
+  font-size: 0.83em;
+}
+.wadah main.kemas section.akun h6 {
+  font-size: 0.67em;
+  font-weight: 100;
+}
+.wadah main.kemas section.akun figure img.bannerAkun {
+  width: 100%;
+  position: absolute;
+}
+.wadah main.kemas section.akun figure img.gambarProfil {
+  width: 25%;
+  border: solid 3px black;
+  position: relative;
+  margin-top: 30%;
+  margin-left: 70vw;
+  border-radius: 50%;
+}
+.wadah main.kemas section.akun article {
+  order: 3;
+  cursor: default;
+  padding: 0 3%;
+  text-align: justify;
+}
+.wadah main.kemas section.akun article h4 {
+  margin: 5% auto 3%;
+  font-size: 1em;
+  font-weight: 400;
+}
+.wadah main.kemas section.akun article p {
+  font-weight: lighter;
+}
+.wadah main.kemas section.akun article a.socials {
+  margin: 5% 0;
+  display: inline-block;
+  background-color: #1a1a1a;
+}
+.wadah main.kemas section.akun article a.socials:hover {
+  background-color: #727272;
+}
+.wadah main.kemas section.akun article a.socials h5 {
+  font-size: 0.83em;
+  font-weight: 600;
+}
+.wadah main.kemas section.akun ul.portofolio {
+  order: 4;
+  padding: 0 3%;
+  margin-bottom: 20%;
+}
+.wadah main.kemas section.akun ul.portofolio h3[title=Portofolio] {
+  margin: 0 0 3%;
+}
+.wadah main.kemas section.akun ul.portofolio li {
+  margin-bottom: 5%;
+}
+.wadah main.kemas section.akun ul.portofolio li a[href="/"] {
+  color: #ddd;
+  text-align: center;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.akun ul.portofolio li a[href="/"] img.videoThumbs, .wadah main.kemas section.akun ul.portofolio li a[href="/"] img.coverAlbums {
+  width: 100%;
+  border-radius: 1.8%;
+}
+.wadah main.kemas section.akun ul.portofolio li a[href="/"] h5.judulVideos, .wadah main.kemas section.akun ul.portofolio li a[href="/"] h5.albumTitles {
+  margin: 1.8% 0;
+  font-size: 1em;
+  text-align: justify;
+}
+.wadah main.kemas section.suntingAkun {
+  display: grid;
+  justify-items: stretch;
+}
+.wadah main.kemas section.suntingAkun h1, .wadah main.kemas section.suntingAkun h3, .wadah main.kemas section.suntingAkun h4, .wadah main.kemas section.suntingAkun h5, .wadah main.kemas section.suntingAkun h6, .wadah main.kemas section.suntingAkun p {
+  color: white;
+}
+.wadah main.kemas section.suntingAkun h1, .wadah main.kemas section.suntingAkun h3, .wadah main.kemas section.suntingAkun h4, .wadah main.kemas section.suntingAkun h6, .wadah main.kemas section.suntingAkun p {
+  cursor: default;
+}
+.wadah main.kemas section.suntingAkun h3, .wadah main.kemas section.suntingAkun h6 {
+  order: 2;
+  margin: 0 3%;
+}
+.wadah main.kemas section.suntingAkun h1 {
+  order: 1;
+  margin: -7% 0 3%;
+  padding: 0 3% 1%;
+}
+.wadah main.kemas section.suntingAkun h1 input[type=text] {
+  width: 100%;
+  color: white;
+  padding: 3%;
+  font-size: 2em;
+  font-weight: 600;
+  background-color: transparent;
+}
+.wadah main.kemas section.suntingAkun h3 {
+  font-size: 1.17em;
+  font-weight: 400;
+}
+.wadah main.kemas section.suntingAkun h6 {
+  font-size: 0.67em;
+  font-weight: 100;
+}
+.wadah main.kemas section.suntingAkun figure img.bannerAkun {
+  width: 100%;
+  position: absolute;
+}
+.wadah main.kemas section.suntingAkun figure img.gambarProfil {
+  width: 25%;
+  border: solid 3px black;
+  position: relative;
+  margin-top: 30%;
+  margin-left: 70vw;
+  border-radius: 50%;
+}
+.wadah main.kemas section.suntingAkun figure input[type=file] {
+  color: whitesmoke;
+  position: absolute;
+}
+.wadah main.kemas section.suntingAkun figure input[type=file].untukBannerAkun {
+  margin-top: 20%;
+  margin-left: 23vw;
+}
+.wadah main.kemas section.suntingAkun figure input[type=file].untukGambarProfil {
+  margin-top: 45%;
+  margin-left: -40vw;
+}
+.wadah main.kemas section.suntingAkun article {
+  order: 3;
+  cursor: default;
+  padding: 0 3%;
+}
+.wadah main.kemas section.suntingAkun article h4 {
+  margin: 5% auto 3%;
+  font-size: 1em;
+  font-weight: 400;
+}
+.wadah main.kemas section.suntingAkun article textarea {
+  width: 100%;
+  color: white;
+  height: 50vh;
+  padding: 3%;
+  text-align: justify;
+  background-color: transparent;
+}
+.wadah main.kemas section.suntingAkun article h5 {
+  margin: 3% 0 25%;
+  font-size: 0.83em;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

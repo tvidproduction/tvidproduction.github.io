@@ -180,7 +180,7 @@ a {
 
 			section.pencarian {
 			    width: 100%;
-				/* background: white; */
+				// background: white; 
 			    border-radius: 5px;
 			    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
 
@@ -792,6 +792,227 @@ a {
 			}
 		}
 		// Akhir Kode Untuk Halaman Papan Instrumen
+
+		// Untuk Halaman Akun
+		section.akun {
+			display: grid;
+			justify-items: stretch;
+
+			h1, h3, h4, h5, h6, p {
+				color: white;
+			}
+			h1, h3, h4, h6, p {
+				cursor: default;
+			}
+			h3, h6 {
+				order: 2;
+				margin: 0 3%;
+			}
+			h1 {
+				order: 1;
+				margin: -10% 0;
+			    padding: 0 3%;
+			    font-size: 2em;
+			    font-weight: 600;
+			}
+			h3 {
+				font-size: 1.17em;
+				font-weight: 400;
+			}
+			h5 {
+				font-size: .83em;
+			}
+			h6 {
+				font-size: .67em;
+				font-weight: 100;
+			}
+
+			figure {
+				img {
+					&.bannerAkun {
+						width: 100%;
+						position: absolute;
+					}
+					&.gambarProfil {
+						width: 25%;
+						border: solid 3px black;
+						position: relative;
+						margin-top: 30%;
+						margin-left: 70vw;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			article {
+				order: 3;
+				cursor: default;
+				padding: 0 3%;
+				text-align: justify;
+
+				h4 {
+					margin: 5% auto 3%;
+					font-size: 1em;
+					font-weight: 400;
+				}
+
+				p {
+					font-weight: lighter;
+				}
+
+				a.socials {
+					margin: 5% 0;
+					display: inline-block;
+					background-color: map-get($Colors-ID, Play);
+
+					&:hover {
+						background-color: map-get($Colors-ID, Hover);
+					}
+					h5 {
+						font-size: .83em;
+						font-weight: 600;
+					}
+				}
+
+			}
+
+			ul.portofolio {
+				order: 4;
+				padding: 0 3%;
+				margin-bottom: 20%;
+
+				h3[title="Portofolio"] {
+					margin: 0 0 3%;
+				}
+
+		    	li {
+		    		margin-bottom: 5%;
+
+		    		a[href="/"] {
+	    			    color: map-get($Colors-ID, Tombol);
+	    			    text-align: center;
+	    			    border-radius: 1.8%;
+	    			    // background-color: black;
+	    			    &:hover {
+    			    	    // background-color: #474747;
+	    			    }
+
+	    			    img {
+	    			    	&.videoThumbs, &.coverAlbums {
+		    			    	width: 100%;
+		    			    	border-radius: 1.8%;
+	    			    	}
+	    			    }
+
+	    			    h5 {
+	    			    	&.judulVideos, &.albumTitles {
+		    			    	margin: 1.8% 0;
+		    			    	font-size: 1em;
+		    			    	text-align: justify;
+	    			    	}
+	    			    }
+		    		}
+		    	}
+			}
+		}
+		// Akhir Kode Untuk Halaman Akun
+
+		// Untuk Halaman Akun
+		section.suntingAkun {
+			display: grid;
+			justify-items: stretch;
+
+			h1, h3, h4, h5, h6, p {
+				color: white;
+			}
+			h1, h3, h4, h6, p {
+				cursor: default;
+			}
+			h3, h6 {
+				order: 2;
+				margin: 0 3%;
+			}
+			h1 {
+				order: 1;
+				margin: -7% 0 3%;
+			    padding: 0 3% 1%;
+
+			    input[type="text"] {
+			    	width: 100%;
+					color: white;
+					padding: 3%;
+				    font-size: 2em;
+				    font-weight: 600;
+					background-color: transparent;
+			    }
+			}
+			h3 {
+				font-size: 1.17em;
+				font-weight: 400;
+			}
+			h6 {
+				font-size: .67em;
+				font-weight: 100;
+			}
+
+			figure {
+				img {
+					&.bannerAkun {
+						width: 100%;
+						position: absolute;
+					}
+					&.gambarProfil {
+						width: 25%;
+						border: solid 3px black;
+						position: relative;
+						margin-top: 30%;
+						margin-left: 70vw;
+						border-radius: 50%;
+					}
+				}
+				input[type="file"] {
+					color: whitesmoke;
+					position: absolute;
+
+					&.untukBannerAkun {
+						margin-top: 20%;
+						margin-left: 23vw;
+					}
+					&.untukGambarProfil {
+						margin-top: 45%;
+						margin-left: -40vw;
+					}
+				}
+			}
+
+			article {
+				order: 3;
+				cursor: default;
+				padding: 0 3%;
+
+				h4 {
+					margin: 5% auto 3%;
+					font-size: 1em;
+					font-weight: 400;
+				}
+
+				textarea {
+					width: 100%;
+					color: white;
+					height: 50vh;
+					padding: 3%;
+					text-align: justify;
+					background-color: transparent;
+				}
+
+				h5 {
+					margin: 3% 0 25%;
+					font-size: .83em;
+					font-weight: 600;
+				}
+			}
+		}
+		// Akhir Kode Untuk Halaman Akun
 	}
 	// Akhir Kode Untuk Konten
 }
