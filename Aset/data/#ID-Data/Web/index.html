@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			width: 100%;
+			font: 16px/23px arial, sans-serif;
+			background-color: lightgrey;
+		}
+
+		nav ul {
+			position: fixed;
+			width: 100%;
+			display: flex;
+			list-style: none;
+			justify-content: space-around;
+			align-items: center;
+			top: 0;
+			min-height: 50px;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: gold;
+		}
+
+		nav ul li a:hover {
+			color: black;
+			background-color: white;
+			border-radius: 3px;
+		}
+
+		.content .information {
+			background-image: url(Information.jpg);
+			background-size: cover;
+			min-height: 697px;
+			background-color: white;
+			background-position: 0 -70px;
+		}
+
+		.content .appearance {
+			color: gold;
+			text-align: center;
+		}
+
+		.content .appearance img {
+			border-radius: 50%;
+			border: 3px solid gold;
+		}
+
+		footer {
+			background-color: grey;
+			position: absolute;
+			width: 100%;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	<title>Website</title>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav>
+		<ul>
+			<li><a href="#">Discography</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<!-- End of Navigation -->
+
+	<!-- Content -->
+	<div class="content">
+		<!-- Jumbotron -->
+		<div class="appearance">
+			<img src="Profile.jpg">
+			<h1>Tovrn</h1>
+			<p>Official Website for Tovrn</p>
+		</div>
+
+		<div class="information"></div>
+		<!-- End of Jumbotron -->
+
+		<!-- Main -->
+		<div class="about" id="about">
+			<h3>About Me!</h3>
+			<img src="Profile.jpg">
+			<p>Nama saya adalah Ramanda Novalto dan saya menggunakan alias Tovrn karena itu adalah singkatan dari nama saya yang kalau dipisahkan yaitu TO = saya ambil dari nama belakang saya Noval<u>TO</u>, V = sama seperti TO, V juga saya ambil dari nama belakang saya No<u>V</u>al. Dan, RN = saya ambil dari nama depan dan belakang, tetapi hanya huruf pertamanya saja. Jadi seperti, <u>R</u>amanda <u>N</u>o<u>V</u>al<u>TO</u>. Lalu saya tukar menjadi - <a href="#">TOVRN</a></p>
+
+			<h3>Info Penting!</h3>
+			<p>Dapatkan koleksi musik saya dengan cara klik link yang ada di navigasi bar. atau, kalian juga bisa klik <a href="#">link yang ada di sini</a>. dan, jangan lupa untuk ikuti saya di sosial media dan juga platform lain.</p>
+
+			<br><br><br><br><br>
+			
+			<p>Untuk info lainnya klik <a href="#">link ini</a>!</p>
+			
+			<br><br><br><br><br><br><br>
+			
+			<p><em>Note!</em>: Untuk mendapatkan lagu saya, anda diharuskan untuk <a href="#">Log-In</a>/<a href="#">Sign-Up</a> terlebih dahulu.</p>
+		</div>
+		<!-- End of Main -->
+	</div>
+	<!-- End of Content -->
+
+	<!-- Footer -->
+	<footer class="discography about contact" id="contact">
+		<p>&copy; Copyright Years | Signature by. <a href="#">Tovrn</a></p>
+		<img src="#" alt="Instagram"><a href="#">Logo Instagram Link</a></img>
+		<img src="#" alt="YouTube"><a href="#">Logo YouTube Link</a></img>
+		<img src="#" alt="Facebook"><a href="#">Logo Facebook Link</a></img>
+	</footer>
+	<!-- End of Footer
+	 -->
+</body>
+</html>

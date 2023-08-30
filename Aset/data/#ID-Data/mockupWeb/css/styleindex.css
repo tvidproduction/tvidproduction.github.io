@@ -1,0 +1,257 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Style*/
+a {
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+body {
+	overflow: hidden;
+	font-family: bahnschrift, sans-serif;
+}
+
+/*The Bodys*/
+.thebodys {
+	/*background-color: #848484;*/
+	display: flex;
+	flex-direction: column;
+}
+.backpic {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-image: linear-gradient(transparent,black);
+	position: absolute;
+}
+.backpic img {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: -1;
+}
+
+/*Container*/
+.container {
+	width: 1250px;
+	margin: 100px auto;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+.content {
+	z-index: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+}
+.desc {
+	width: 100%;
+	line-height: 1.3;
+	text-align: left;
+}
+.desc span {
+	margin: auto;
+}
+.pic img {
+	border: 3px solid #1a1a1a;
+	border-radius: 50%;
+	width: 54%;
+}
+.cover img {
+	width: 80%;
+}
+
+/*Navigate*/
+.navigate {
+	/*background-color: green;*/
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.burger {
+	display: flex;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	margin: 23px 0 0 30px;
+	position: relative;
+}
+.burger input {
+	z-index: 4;
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	margin: -4px 0 0 -6px;
+	opacity: 0;
+	cursor: pointer;
+}
+.burger span {
+	z-index: 3;
+	display: block;
+	width: 28px;
+	height: 3px;
+	border-radius: 3px;
+	transition: all 0.5s ease;
+	background-color: #474747;
+}
+.burger span:nth-child(2) {
+	/*transform-origin: 0 0;*/
+	width: 17px;
+}
+.burger span:nth-child(4) {
+	/*transform-origin: 0 100%;*/
+	width: 23px;
+}
+.burger input:checked ~ span:nth-child(2) {
+	/*transform: rotate(45deg) translate(-1px, -1px);*/
+	width: 28px;
+}
+.burger input:checked ~ span:nth-child(4) {
+	/*transform: rotate(-45deg) translate(0, 0);*/
+	width: 28px;
+}
+ul {
+	z-index: 2;
+	list-style: none;
+	background-color: #1a1a1a;
+	display: flex;
+	width: 35%;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	align-items: center;
+	justify-content: space-evenly;
+	transform: translateX(-100%);
+	transition: all 0.8s ease;
+	opacity: 0;
+	overflow: hidden;
+}
+ul a {
+	font-size: 15px;
+	background-color: #848484;
+	border-radius: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 500px 10px 500px;
+	transition: all 0.3s ease
+}
+ul a:hover {
+	background-color: #848484;
+	border-radius: 100%;
+	padding: 70px 300px 70px 300px;
+	transition: all 0.5s ease;
+}
+ul .slide {
+	opacity: 1;
+	transform: translateX(0);
+}
+.search {
+	/*max-width: 289px;*/
+	max-width: 290px;
+	margin: auto;
+	/*font-size: 23px;*/
+	/*text-align: center;*/
+	/*margin: 20px 205px 0 0;*/
+}
+.search .search-box {
+	/*background-color: grey;*/
+	width: 100%;
+	/*overflow: auto;*/
+	border-radius: 5px;
+	box-shadow: 0 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-box input {
+	width: 100%;
+	/*height: 23px;*/
+	font-size: 23px;
+	line-height: 1.5em;
+	outline: none;
+	border: none;
+	cursor: text;
+	/*text-align: center;*/
+	color: black;
+	background-color: transparent;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+.search-box .artists {
+	list-style: none;
+	font-size: 20px;
+	line-height: 2em;
+	overflow-y: auto;
+	opacity: 0;
+	pointer-events: none;
+}
+.search-box.active .artists {
+	opacity: 1;
+	pointer-events: auto;
+	max-height: 295px;
+	overflow: scroll;
+}
+.search-box.active .artists li {
+	display: block;
+}
+.artists li:hover {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+.artists img {
+	border-radius: 50%;
+}
+.artists li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*justify-content: space-evenly;*/
+	justify-content: space-around;
+	display: none;
+}
+.login {
+	z-index: 1;
+	background-color: #474747;
+	border-radius: 3px;
+	font-size: 20px;
+	padding: 5px;
+	margin: 20px 30px 20px 0;
+}
+
+/*Poles*/
+.poles {
+	z-index: 1;
+	display: flex;
+	width: 150px;
+	justify-content: space-between;
+	/*justify-content: space-evenly;*/
+	/*position: absolute;*/
+	/*bottom: 50px;
+	left: 610px;*/
+	margin: -20px auto;
+}
+.poles span {
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background-color: white;
+}
+.poles span:nth-child(3) {
+	transform: scale(1.5);
+}
+.poles span:nth-child(1) {
+	transform: scale(0.7);
+}
+.poles span:nth-child(5) {
+	transform: scale(0.7);
+}
+
+/*Respon*/
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
