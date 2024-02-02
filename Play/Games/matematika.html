@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id, en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../../Aset/TVID-Favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="TVID Production Official Website">
+        <meta name="author" content="TVID Development">
+        <meta name="keywords" content="TVID Production, TVID Records, TVID Pictures, TVID Store, TVID Developments, TVID Plays">
+        <link rel="stylesheet" href="../../Aset/Gaya/style.css">
+        <!-- <style>*{border: solid red 1px;}</style> -->
+        <title>[ Menghitung ] <|> TVID Production &mdash; Capacity of Creativity (Stay Creative)</title>
+    </head>
+    <body class="wadah">
+        <!-- Pembungkus Untuk Konten -->
+        <div class="kemas">
+            <!-- Isi Konten -->
+            <section class="masuk">
+                <h1>Menghitung Penjumlahan</h1>
+                <!-- <form action="/Play/matematika.html" method="GET"> -->
+                <form action="file:///D:/file/Project/Web/htdocs/antarMuka/Play/matematika.html" method="GET">
+                    <ul>
+                        <li>
+                            <label>
+                                <h3></h3>
+                                <input type="number" autocomplete="off" required>
+                            </label>
+                        </li>
+                        <li>
+                            <button type="submit">Jawab</button>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+            <!-- Akhir Isi Konten -->
+        </div>
+        <!-- Akhir Pembungkus Untuk Konten -->
+        <script src="../../Aset/Fungsi/script.js" type="module"></script>
+        <!-- <script src="../Aset/Fungsi/Bagian/Permainan/tingkatSekolahDasar.js"></script> -->
+        <script>
+            /*Matematika Kelas 1 Sekolah Dasar*/
+            /*const penjumlahan = (nilaiPertama, nilaiKedua) => {
+                let hasil
+
+                hasil = nilaiPertama + nilaiKedua
+
+                return hasil
+            }*/
+
+            // Pengulangan & Pengkondisian
+            let ulangLagi = true
+
+            while (ulangLagi) {
+                let nilaiAcakKeAtas = Math.ceil(Math.random() * 5 + 1)
+                let nilaiAcakKeBawah = Math.floor(Math.random() * 5 + 1)
+                const tambahTambahan = penjumlahan(nilaiAcakKeAtas, nilaiAcakKeBawah)
+                const ganjilAtauGenap = (tambahTambahan % 2 == 0) ? "Genap" : "Ganjil"
+                const hasilnya = prompt("Jumlahkan hasil dari " + nilaiAcakKeAtas + " + " + nilaiAcakKeBawah + " = ")
+                const soal = document.getElementsByTagName('h3')
+                const jawaban = document.getElementsByTagName('input')
+                const ngirim = document.getElementsByTagName('button')
+
+                soal.innerHTML = `Jumlahkan Hasil Berikut<br>: `+nilaiPertama+` + `+nilaiKedua+` =`+hasil
+
+                jawaban.addEventListener('submit', (isi)=>{
+                    if (jawaban.contains(!hasil)) {
+                        alert('Jawaban Salah!')
+                    }
+                })
+
+                if (tambahTambahan == hasilnya) {
+                    alert("Selamat!\nJawaban Kamu Benar!")
+                    alert("Kamu Menjawab ( " + hasilnya + " )")
+                    alert("Nilai " + tambahTambahan + " Adalah Nilai (" + ganjilAtauGenap + ")")
+                    ulangLagi = confirm("Mau Ulang Lagi?")
+                } else {
+                    alert("Jawaban Kamu Salah!")
+                    alert("Kamu Menjawab ( " + hasilnya + " )")
+                    alert("Jawaban yang Tepat adalah [ " + tambahTambahan + " ]")
+                    alert("Nilai " + tambahTambahan + " Adalah Nilai (" + ganjilAtauGenap + ")")
+                    ulangLagi = confirm("Jangan menyerah!\nAyo Coba Lagi?")
+                }
+
+            }
+
+            alert("Terima Kasih Telah Berpartisipasi!")
+            // Akhir Pengulangan & Pengkondisian
+            /*Akhir Matematika Kelas 1 Sekolah Dasar*/
+        </script>
+    </body>
+</html>

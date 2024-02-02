@@ -41,8 +41,8 @@ $RECYCLE.BIN/
 .sass-cache/
 
 ### IGNORE oleh TVID Developments Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore ###
-/About/index1.html
-/Account
+# /About/index1.html
+# /Account
 # /Aset/_Fungsi
 # /Aset/_Gaya
 # /Aset/_SASS
@@ -57,24 +57,24 @@ $RECYCLE.BIN/
 # /Aset/data/#ID-Data/Web
 # /Aset/Fungsi
 # /Aset/Gaya/style.css.map
-/Aset/konten.js
-/Discography/index1.html
+# /Aset/konten.js
+# /Discography/index1.html
 /node_modules
-/Play/Games
-/Play/index1.html
-/Product/Invoice
-/Product/index1.html
-/SignIn/index1.html
-/Store/Profile
-/Store/index1.html
-/Videography/index1.html
+# /Play/Games
+# /Play/index1.html
+# /Product/Invoice
+# /Product/index1.html
+# /SignIn/index1.html
+# /Store/Profile
+# /Store/index1.html
+# /Videography/index1.html
 ._package-lock.json
 ._package.json
 # .gitattributes
 # .gitignore
 # _contekan.txt
 # data.json
-index1.html
+# index1.html
 konfigurasi-antarmuka.js
 pengelola.js
 pengembang.js
