@@ -47,12 +47,12 @@ $RECYCLE.BIN/
 /Aset/_Gaya
 /Aset/_SASS
 /Aset/data/#ID-Data/cPictures
-/Aset/data/#ID-Data/IG
+# /Aset/data/#ID-Data/IG
 /Aset/data/#ID-Data/laravel-9
 # /Aset/data/#ID-Data/mockupWeb
 # /Aset/data/#ID-Data/pelajaranYangdiKetik
 # /Aset/data/#ID-Data/proposal usaha
-/Aset/data/#ID-Data/Spotify Wrapped
+# /Aset/data/#ID-Data/Spotify Wrapped
 /Aset/data/#ID-Data/unreleaseFilePS
 # /Aset/data/#ID-Data/Web
 /Aset/Fungsi
@@ -80,8 +80,9 @@ pengelola.js
 pengembang.js
 
 ### Ignore Sementara ###
-index.html
-/Aset/Gaya
-/Aset/SASS
-/Aset/menu.js
-/Aset/script.js
+# index.html
+# /Aset/Gaya
+# /Aset/SASS
+# /Aset/menu.js
+# /Aset/script.js
+### Tidak Bisa Meng-Ignore Sementara ###
