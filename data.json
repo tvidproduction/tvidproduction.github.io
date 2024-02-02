@@ -1,0 +1,68 @@
+{
+	"Metadata": {
+		"Description": "TVID Production Official Website",
+		"Author": "TVID Development",
+		"Keywords": [
+			"TVID Production",
+			"TVID Records",
+			"TVID Pictures",
+			"TVID Store",
+			"TVID Developments",
+			"TVID Plays"
+		]
+	},
+	"Halaman": {
+		"Beranda": {
+			"Nama": "Beranda",
+			"Alamat": "/"
+		},
+		"Videografi": {
+			"Nama": "Videografi",
+			"Alamat": "/Videography"
+		},
+		"Diskografi": {
+			"Nama": "Diskografi",
+			"Alamat": "/Discography"
+		},
+		"Toko": {
+			"Nama": "Toko",
+			"Alamat": "/Store"
+		},
+		"Main": {
+			"Nama": "Main",
+			"Alamat": "/Play"
+		},
+		"Tentang Kami": {
+			"Nama": "Tentang Kami",
+			"Alamat": "https://wp.me/Pbwvnt-2l"
+		},
+		"Hubungi Kami": {
+			"Nama": "Hubungi Kami",
+			"Alamat": "https://wa.me/message/4FUFJSHQ3MN7N1"
+		},
+		"WhatsApp Kami": {
+			"Nama": "WhatsApp Kami",
+			"Alamat": "https://api.whatsapp.com/send/?phone=6285195401239&text&type=phone_number&app_absent=1"
+		}
+	},
+	"Versi": "1.0.0",
+	"Untuk": "TVID Production",
+	"Akhiran": "Capacity of Creativity (Stay Creative)",
+	"BekerjaSamaDengan": {
+		"Agi Upe": "Toko Kue",
+		"Apryas": "Toko Cemilan",
+		"Tovrn": "Artis",
+		"Tufren": "Pengembang"
+	},
+	"Sumber": {
+		"Favicon": "Aset/TVID-Favicon.png",
+		"StyleSheet": "Aset/Gaya/style.css",
+		"ProfilPencarian": [
+			"Aset/Gambar/Daftar Putar Spotify (Playlist) 5.0.png",
+			"Aset/Gambar/Profile.jpg"
+		],
+		"GambarPrduk": "Aset/Gambar/Antlia Cover.jpg",
+		"GambarProfil": "Aset/Gambar/Profile Picture TVID.jpg",
+		"Script": "Aset/script.js"
+	}
+}

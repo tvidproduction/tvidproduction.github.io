@@ -53,7 +53,7 @@ $RECYCLE.BIN/
 # /Aset/data/#ID-Data/pelajaranYangdiKetik
 # /Aset/data/#ID-Data/proposal usaha
 # /Aset/data/#ID-Data/Spotify Wrapped
-/Aset/data/#ID-Data/unreleaseFilePS
+# /Aset/data/#ID-Data/unreleaseFilePS
 # /Aset/data/#ID-Data/Web
 /Aset/Fungsi
 # /Aset/Gaya/style.css.map
@@ -73,7 +73,7 @@ $RECYCLE.BIN/
 # .gitattributes
 # .gitignore
 # _contekan.txt
-data.json
+# data.json
 index1.html
 konfigurasi-antarmuka.js
 pengelola.js
