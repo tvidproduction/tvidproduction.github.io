@@ -3,8 +3,8 @@ alias periksa="git log --all --decorate --oneline --graph"
 
 CONTOH PUSHING ON GIT
 git add .
-	commit -m "commitKe(nomorUrut):(pesanUntukPenjelasanDiGit{namafile/FolderKalauAda[untukTipeFile]})"
-	push
+git commit -m "commitKe(nomorUrut):(pesanUntukPenjelasanDiGit{namafile/FolderKalauAda[untukTipeFile]})"
+git push
 
 CONTOH COMPILER FOR SASS/SCSS FILE
 sass sass/input.scss gaya/style.css -w

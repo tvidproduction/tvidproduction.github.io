@@ -1,0 +1,143 @@
+// @use './gaya';
+@media (max-width: 1024px) {
+    .wadah {
+        display: none;
+    }
+    /*.wadah {
+        color: black;
+        display: grid;
+        overflow-x: hidden;
+        font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+        letter-spacing: 1px;
+        background-color: map-get($id, Background);
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        a {
+            color: map-get($id, Play);
+            display: block;
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100vw;
+            height: 90px;
+            position: absolute;
+
+            .burger {
+                top: 34px;
+                left: 40px;
+                width: 28px;
+                height: 20px;
+                z-index: 2;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: space-between;
+
+                input {
+                    top: -4px;
+                    width: 28px;
+                    height: 28px;
+                    cursor: pointer;
+                    opacity: 0;
+                    position: absolute;
+                }
+
+                span {
+                    width: 28px;
+                    height: 3px;
+                    transition: all 500ms ease-in-out;
+                    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .12);
+                    border-radius: 3px;
+                    background-color: map-get($id, Play);
+                }
+
+                span:nth-child(2) {
+                    width: 17px;
+                }
+
+                span:last-child {
+                    width: 23px;
+                }
+
+                input:checked~span:nth-child(2) {
+                    width: 28px;
+                }
+
+                input:checked~span:last-child {
+                    width: 28px;
+                }
+            }
+
+            ul {
+                top: -100px;
+                left: 0;
+                width: 28%;
+                height: 115vh;
+                opacity: 0;
+                z-index: 1;
+                display: flex;
+                position: fixed;
+                transform: translateX(-101%);
+                transition: all 800ms ease;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                background-color: map-get($id, Magnet);
+
+                &.geser {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                li {
+                    a {
+                        width: 381px;
+                        color: map-get($id, Background);
+                        height: 10vh;
+                        display: flex;
+                        font-weight: 300;
+                        align-items: center;
+                        letter-spacing: 3px;
+                        justify-content: center;
+
+                        &:hover {
+                            color: white;
+                            box-shadow: -5px 0 5px 1px map-get($id, Play);
+                            font-weight: 500;
+                            background-color: map-get($id, Background);
+                        }
+
+                        &:active {
+                            color: white;
+                            font-weight: 700;
+                        }
+                    }
+
+                    footer {
+                        $id-Footer: #666 !global;
+
+                        h6 {
+                            top: 700px;
+                            color: $id_Footer;
+                            margin: -12px -107px;
+                            cursor: default;
+                            position: absolute;
+                            text-shadow: 0 1px 3px map-get($id, Play);
+                            font-weight: 100;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .kemas {
+            margin: 130px 45px 35px;
+        }
+    }*/
+}

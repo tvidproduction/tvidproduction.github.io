@@ -1,0 +1,1699 @@
+// Root
+$id: (
+    Play: #1a1a1a,
+    Hover: #727272,
+    Footer: #666,
+    Tombol: #ddd,
+    Magnet: #474747,
+    Background: #848484
+);
+
+$Index-ID: (
+    Tingkat-Dasar       : 0 !important,
+    Tingkat-Pertama     : 1 !important,
+    Tingkat-Kedua       : 2 !important,
+    Tingkat-Ketiga      : 3 !important,
+    Tingkat-Keempat     : 4 !important,
+    Tingkat-Kelima      : 5 !important,
+    Tingkat-Keenam      : 6 !important,
+    Tingkat-Ketujuh     : 7 !important,
+    Tingkat-Kedelapan   : 8 !important,
+    Tingkat-Kesembilan  : 9 !important
+);
+// Akhir Kode Root
+
+// @import 'lebarPerangkat/1440laptopL', 'lebarPerangkat/1024Laptop';
+
+/* Reset Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    color: map-get($id, Play);
+    display: block;
+    text-decoration: none;
+}
+
+.wadah {
+    color: black;
+    height: 100vh;
+    display: grid;
+    overflow-x: hidden;
+    font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+    letter-spacing: 1px;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+    background-color: map-get($id, Background);
+}
+/* Akhir Kode Reset Style */
+
+// Responsif by PaDhika
+@media (min-width: 1366px) {
+    /* Memberikan Gaya*/
+    nav {
+        top: 4.6%;
+        width: 100vw;
+        // height: 90px;
+        z-index: map-get($Index_ID, Tingkat-Kedua);
+        display: flex;
+        position: absolute;
+        // position: fixed;
+        // align-items: center;
+
+        .burger {
+            left: 3%;
+            height: 20px;
+            z-index: map-get($Index_ID, Tingkat-Kelima);
+            display: flex;
+            position: relative;
+            margin-top: .65%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            input {
+                top: -4px;
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                opacity: 0;
+                position: absolute;
+            }
+
+            span {
+                width: 28px;
+                height: 3px;
+                transition: all 500ms ease-in-out;
+                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .12);
+                border-radius: 3px;
+                background-color: map-get($id, Play);
+            }
+
+            span:nth-child(2) {
+                width: 17px;
+            }
+
+            span:last-child {
+                width: 23px;
+            }
+
+            input:checked~span:nth-child(2) {
+                width: 28px;
+            }
+
+            input:checked~span:last-child {
+                width: 28px;
+            }
+        }
+
+        ul {
+            top: -92px;
+            left: 0;
+            width: 28%;
+            height: 115vh;
+            opacity: 0;
+            z-index: map-get($Index_ID, Tingkat-Keempat);
+            display: flex;
+            position: fixed;
+            transform: translateX(-101%);
+            transition: all 800ms ease;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: map-get($id, Magnet);
+
+            &.geser {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            a {
+                width: 381px;
+                color: map-get($id, Background);
+                height: 10vh;
+                display: flex;
+                font-weight: 300;
+                align-items: center;
+                letter-spacing: 3px;
+                justify-content: center;
+
+                &:hover {
+                    color: white;
+                    box-shadow: -5px 0 5px 1px map-get($id, Play);
+                    font-weight: 500;
+                    background-color: map-get($id, Background);
+                }
+
+                &:active {
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+
+            h6 {
+                top: 700px;
+                color: map-get($id, Footer);
+                margin: -12px -107px;
+                cursor: default;
+                position: absolute;
+                text-shadow: 0 1px 3px map-get($id, Play);
+                font-weight: 100;
+                letter-spacing: 3px;
+            }
+        }
+
+        .pembungkusPencarian {
+            margin: .26% 35.5% 0 35.55%;
+            z-index: map-get($Index_ID, Tingkat-Ketiga);
+            position: relative;
+
+            section.pencarian {
+                width: 100%;
+                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                background: white;
+                border-radius: 5px;
+
+                input {
+                    width: 340px;
+                    height: 32px;
+                    border: none;
+                    padding: 0 10px 0 10px;
+                    outline: none;
+                    font-size: 18px;
+                    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                    border-radius: 5px;
+                    background-color: white;
+
+                    &::placeholder {
+                        text-align: center;
+                    }
+                }
+
+                &.active {
+                    section.daftarPencarian {
+                        opacity: 1;
+                        display: flex;
+                        border-radius: 0 0 5px 5px;
+                        pointer-events: auto;
+                        flex-direction: column;
+                    }
+                }
+
+                section.daftarPencarian {
+                    opacity: 0;
+                    display: none;
+                    overflow-y: auto;
+                    max-height: 280px;
+                    pointer-events: none;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            color: map-get($id, Play);
+                            display: flex;
+                            padding: 8px 10px;
+                            font-size: 20px;
+                            font-weight: 400;
+                            align-items: center;
+
+                            &:hover {
+                                width: 100%;
+                                color: map-get($id, Hover);
+                                background-color: map-get($id, Tombol);
+                            }
+
+                            img {
+                                flex: 1;
+                                height: 38px;
+                                border: 2px solid map-get($id, Magnet);
+                                border-radius: 50%;
+                            }
+
+                            h5 {
+                                flex: 8;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                // &.active>section.daftarPencarian {
+                //     opacity: 1;
+                //     pointer-events: auto;
+                // }
+            }
+
+            // section.pencarian.active {
+            //     // top: 140px;
+                
+            //     section.daftarPencarian {
+            //         opacity: 1;
+            //         display: flex;
+            //         border-radius: 0 0 5px 5px;
+            //         pointer-events: auto;
+            //         flex-direction: column;
+            //     }
+            // }
+        }
+
+        section.masuk {
+            right: 6.3%;
+            z-index: map-get($Index_ID, Tingkat-Ketiga);
+            position: relative;
+
+            button {
+                border: none;
+                font-size: 24px;
+                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                border-radius: 5px;
+                background-color: map-get($id, Play);
+
+                &:hover {
+                    cursor: default;
+                    background-color: map-get($id, Magnet);
+                }
+
+                a {
+                    color: white;
+                    padding: 5px;
+
+                    &:hover {
+                        color: map-get($id, Tombol);
+                    }
+                }
+            }
+        }
+    }
+
+    .kemas {
+        margin: 115px 40px 90px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        section.beranda {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            article {
+                color: white;
+                width: 400px;
+                cursor: default;
+                padding: 7px;
+                text-align: justify;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                h1 {
+                    font-size: 2em;
+                    text-align: center;
+                    margin-bottom: 3px;
+                }
+            }
+
+            a {
+                border-radius: 50%;
+
+                img {
+                    width: 380px;
+                    display: flex;
+                    text-align: center;
+                    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                    align-items: center;
+                    justify-content: space-between;
+
+
+                    &.gambarProfil {
+                        border: 5px solid black;
+                        z-index: map-get($Index_ID, Tingkat-Pertama);
+                        position: relative;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        section.masuk {
+            color: map-get($id, Tombol);
+            width: 450px;
+            margin: auto;
+            height: 400px;
+            display: flex;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+            align-items: center;
+            border-radius: 5px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: map-get($id, Magnet);
+
+            h1 {
+                cursor: default;
+                font-size: 2.6em;
+                text-align: center;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+            }
+
+            h5 {
+                font-size: medium;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                font-weight: 500;
+            }
+
+            input {
+                width: 280px;
+                margin: 12px auto 48px;
+                height: 32px;
+                border: none;
+                outline: none;
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 3px;
+                background-color: white;
+            }
+
+            li {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    color: white;
+                    border: none;
+                    padding: 5px;
+                    font-size: 1.1em;
+                    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                    border-radius: 5px;
+                    background-color: map-get($id, Play);
+
+                    &:hover {
+                        color: map-get($id, Tombol);
+                        cursor: pointer;
+                        background-color: map-get($id, Hover);
+                    }
+                }
+            }
+        }
+
+        section.videografi {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarVideo {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 25px 15px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 5%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.diskografi {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarMusik {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 3%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.toko {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarToko {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                border: 3px solid black;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 50%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.main {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarPermainan {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 3%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Akhir Kode Memberikan Gaya */
+}
+@media (min-width: 768px) {
+    /* Memberikan Gaya*/
+    nav {
+        top: 4.6%;
+        width: 100vw;
+        // height: 90px;
+        z-index: map-get($Index_ID, Tingkat-Kedua);
+        display: flex;
+        position: absolute;
+        // position: fixed;
+        // align-items: center;
+
+        .burger {
+            left: 3%;
+            height: 20px;
+            z-index: map-get($Index_ID, Tingkat-Kelima);
+            display: flex;
+            position: relative;
+            margin-top: .65%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            input {
+                top: -4px;
+                width: 28px;
+                height: 28px;
+                cursor: pointer;
+                opacity: 0;
+                position: absolute;
+            }
+
+            span {
+                width: 28px;
+                height: 3px;
+                transition: all 500ms ease-in-out;
+                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .12);
+                border-radius: 3px;
+                background-color: map-get($id, Play);
+            }
+
+            span:nth-child(2) {
+                width: 17px;
+            }
+
+            span:last-child {
+                width: 23px;
+            }
+
+            input:checked~span:nth-child(2) {
+                width: 28px;
+            }
+
+            input:checked~span:last-child {
+                width: 28px;
+            }
+        }
+
+        ul {
+            top: -92px;
+            left: 0;
+            width: 28%;
+            height: 115vh;
+            opacity: 0;
+            z-index: map-get($Index_ID, Tingkat-Keempat);
+            display: flex;
+            position: fixed;
+            transform: translateX(-101%);
+            transition: all 800ms ease;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: map-get($id, Magnet);
+
+            &.geser {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            a {
+                width: 381px;
+                color: map-get($id, Background);
+                height: 10vh;
+                display: flex;
+                font-weight: 300;
+                align-items: center;
+                letter-spacing: 3px;
+                justify-content: center;
+
+                &:hover {
+                    color: white;
+                    box-shadow: -5px 0 5px 1px map-get($id, Play);
+                    font-weight: 500;
+                    background-color: map-get($id, Background);
+                }
+
+                &:active {
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+
+            h6 {
+                top: 700px;
+                color: map-get($id, Footer);
+                margin: -12px -107px;
+                cursor: default;
+                position: absolute;
+                text-shadow: 0 1px 3px map-get($id, Play);
+                font-weight: 100;
+                letter-spacing: 3px;
+            }
+        }
+
+        .pembungkusPencarian {
+            margin: .26% 35.5% 0 35.55%;
+            z-index: map-get($Index_ID, Tingkat-Ketiga);
+            position: relative;
+
+            section.pencarian {
+                width: 100%;
+                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                background: white;
+                border-radius: 5px;
+
+                input {
+                    width: 340px;
+                    height: 32px;
+                    border: none;
+                    padding: 0 10px 0 10px;
+                    outline: none;
+                    font-size: 18px;
+                    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+                    border-radius: 5px;
+                    background-color: white;
+
+                    &::placeholder {
+                        text-align: center;
+                    }
+                }
+
+                &.active {
+                    section.daftarPencarian {
+                        opacity: 1;
+                        display: flex;
+                        border-radius: 0 0 5px 5px;
+                        pointer-events: auto;
+                        flex-direction: column;
+                    }
+                }
+
+                section.daftarPencarian {
+                    opacity: 0;
+                    display: none;
+                    overflow-y: auto;
+                    max-height: 280px;
+                    pointer-events: none;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            color: map-get($id, Play);
+                            display: flex;
+                            padding: 8px 10px;
+                            font-size: 20px;
+                            font-weight: 400;
+                            align-items: center;
+
+                            &:hover {
+                                width: 100%;
+                                color: map-get($id, Hover);
+                                background-color: map-get($id, Tombol);
+                            }
+
+                            img {
+                                flex: 1;
+                                height: 38px;
+                                border: 2px solid map-get($id, Magnet);
+                                border-radius: 50%;
+                            }
+
+                            h5 {
+                                flex: 8;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                // &.active>section.daftarPencarian {
+                //     opacity: 1;
+                //     pointer-events: auto;
+                // }
+            }
+
+            // section.pencarian.active {
+            //     // top: 140px;
+                
+            //     section.daftarPencarian {
+            //         opacity: 1;
+            //         display: flex;
+            //         border-radius: 0 0 5px 5px;
+            //         pointer-events: auto;
+            //         flex-direction: column;
+            //     }
+            // }
+        }
+
+        section.masuk {
+            right: 6.3%;
+            z-index: map-get($Index_ID, Tingkat-Ketiga);
+            position: relative;
+
+            button {
+                border: none;
+                font-size: 24px;
+                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                border-radius: 5px;
+                background-color: map-get($id, Play);
+
+                &:hover {
+                    cursor: default;
+                    background-color: map-get($id, Magnet);
+                }
+
+                a {
+                    color: white;
+                    padding: 5px;
+
+                    &:hover {
+                        color: map-get($id, Tombol);
+                    }
+                }
+            }
+        }
+    }
+
+    .kemas {
+        margin: 115px 40px 90px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        section.beranda {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            article {
+                color: white;
+                width: 400px;
+                cursor: default;
+                padding: 7px;
+                text-align: justify;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                h1 {
+                    font-size: 2em;
+                    text-align: center;
+                    margin-bottom: 3px;
+                }
+            }
+
+            a {
+                border-radius: 50%;
+
+                img {
+                    width: 380px;
+                    display: flex;
+                    text-align: center;
+                    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                    align-items: center;
+                    justify-content: space-between;
+
+
+                    &.gambarProfil {
+                        border: 5px solid black;
+                        z-index: map-get($Index_ID, Tingkat-Pertama);
+                        position: relative;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        section.masuk {
+            color: map-get($id, Tombol);
+            width: 450px;
+            margin: auto;
+            height: 400px;
+            display: flex;
+            box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+            align-items: center;
+            border-radius: 5px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: map-get($id, Magnet);
+
+            h1 {
+                cursor: default;
+                font-size: 2.6em;
+                text-align: center;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+            }
+
+            h5 {
+                font-size: medium;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                font-weight: 500;
+            }
+
+            input {
+                width: 280px;
+                margin: 12px auto 48px;
+                height: 32px;
+                border: none;
+                outline: none;
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 3px;
+                background-color: white;
+            }
+
+            li {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    color: white;
+                    border: none;
+                    padding: 5px;
+                    font-size: 1.1em;
+                    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                    border-radius: 5px;
+                    background-color: map-get($id, Play);
+
+                    &:hover {
+                        color: map-get($id, Tombol);
+                        cursor: pointer;
+                        background-color: map-get($id, Hover);
+                    }
+                }
+            }
+        }
+
+        section.videografi {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarVideo {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 25px 15px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 5%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.diskografi {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarMusik {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 3%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.toko {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarToko {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                border: 3px solid black;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 50%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.main {
+            width: 93.9vw;
+            position: absolute;
+
+            .daftarPermainan {
+                text-align: center;
+                overflow-y: overlay;
+
+                ul {
+                    gap: 20px;
+                    display: grid;
+                    max-width: 1262px;
+                    max-height: 446px;
+                    grid-template-columns: auto auto auto auto auto auto;
+
+                    li {
+                        text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+                        a {
+                            color: white;
+                            padding: 12px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                color: map-get($id, Tombol);
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+                                background-color: map-get($id, Hover);
+                            }
+
+                            img {
+                                height: 150px;
+                                box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+                                border-radius: 3%;
+                            }
+
+                            .judul {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Akhir Kode Memberikan Gaya */
+}
+// @media (min-width: 450px) {
+//     /* Reset Style */
+//     .wadah {
+//         // color: black;
+//         height: 100%;
+//         // display: grid;
+//         overflow-x: hidden;
+//         // font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+//         // letter-spacing: 1px;
+//         // background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+//         // background-color: map-get($id, Background);
+//     }
+//     /* Akhir Kode Reset Style */
+
+//     /* Memberikan Gaya*/
+//     nav {
+//         top: 90.8%;
+//         width: 100vw;
+//         z-index: map-get($Index_ID, Tingkat-Kedua);
+//         display: flex;
+//         position: fixed;
+
+//         .burger {
+//             left: 7%;
+//             height: 20px;
+//             z-index: map-get($Index_ID, Tingkat-Kelima);
+//             display: flex;
+//             position: relative;
+//             flex-direction: column;
+//             justify-content: space-between;
+
+//             input {
+//                 top: -4px;
+//                 width: 28px;
+//                 height: 28px;
+//                 cursor: pointer;
+//                 opacity: 0;
+//                 position: absolute;
+//             }
+
+//             span {
+//                 width: 28px;
+//                 height: 3px;
+//                 transition: all 500ms ease-in-out;
+//                 box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .12);
+//                 border-radius: 3px;
+//                 background-color: map-get($id, Play);
+//             }
+
+//             span:nth-child(2) {
+//                 width: 17px;
+//             }
+
+//             span:last-child {
+//                 width: 23px;
+//             }
+
+//             input:checked~span:nth-child(2) {
+//                 width: 28px;
+//             }
+
+//             input:checked~span:last-child {
+//                 width: 28px;
+//             }
+//         }
+
+//         ul {
+//             bottom: 5%;
+//             // left: 0;
+//             flex-wrap: wrap;
+//             border-radius: 5px;
+//             width: 90vw;
+//             height: 90vh;
+//             opacity: 0;
+//             z-index: map-get($Index_ID, Tingkat-Keempat);
+//             display: flex;
+//             position: fixed;
+//             transform: translateX(-110%);
+//             transition: all 800ms ease;
+//             // text-align: center;
+//             align-content: center;
+//             flex-direction: column-reverse;
+//             justify-content: center;
+//             background-color: map-get($id, Magnet);
+//             box-shadow: 0 1px 5px 1px map-get($id, Play);
+
+//             &.geser {
+//                 opacity: 1;
+//                 transform: translateX(0);
+//             }
+
+//             a {
+//                 width: 90vw;
+//                 color: map-get($id, Background);
+//                 height: 10vh;
+//                 display: flex;
+//                 font-weight: 300;
+//                 align-items: center;
+//                 letter-spacing: 3px;
+//                 justify-content: center;
+
+//                 &:hover {
+//                     color: map-get($id, Tombol);
+//                     font-weight: 500;
+//                     background-color: map-get($id, Background);
+//                 }
+
+//                 &:active {
+//                     color: white;
+//                     font-weight: 700;
+//                 }
+//             }
+
+//             h6 {
+//                 // top: 700px;
+//                 text-align: center;
+//                 margin-top: -13%;
+//                 color: map-get($id, Footer);
+//                 // margin: -12px -107px;
+//                 cursor: default;
+//                 position: relative;
+//                 text-shadow: 0 1px 3px map-get($id, Play);
+//                 font-weight: 100;
+//                 letter-spacing: 3px;
+//             }
+//         }
+
+//         .pembungkusPencarian {
+//             display: none;
+//             margin: .26% 35.5% 0 35.55%;
+//             z-index: map-get($Index_ID, Tingkat-Ketiga);
+//             position: relative;
+
+//             section.pencarian {
+//                 width: 100%;
+//                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                 background: white;
+//                 border-radius: 5px;
+
+//                 input {
+//                     width: 340px;
+//                     height: 32px;
+//                     border: none;
+//                     padding: 0 10px 0 10px;
+//                     outline: none;
+//                     font-size: 18px;
+//                     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+//                     border-radius: 5px;
+//                     background-color: white;
+
+//                     &::placeholder {
+//                         text-align: center;
+//                     }
+//                 }
+
+//                 &.active {
+//                     section.daftarPencarian {
+//                         opacity: 1;
+//                         display: flex;
+//                         border-radius: 0 0 5px 5px;
+//                         pointer-events: auto;
+//                         flex-direction: column;
+//                     }
+//                 }
+
+//                 section.daftarPencarian {
+//                     opacity: 0;
+//                     display: none;
+//                     overflow-y: auto;
+//                     max-height: 280px;
+//                     pointer-events: none;
+
+//                     li {
+//                         list-style: none;
+
+//                         a {
+//                             color: map-get($id, Play);
+//                             display: flex;
+//                             padding: 8px 10px;
+//                             font-size: 20px;
+//                             // text-align: center;
+//                             font-weight: 400;
+//                             align-items: center;
+
+//                             &:hover {
+//                                 width: 100%;
+//                                 color: map-get($id, Hover);
+//                                 background-color: map-get($id, Tombol);
+//                             }
+
+//                             img {
+//                                 flex: 1;
+//                                 height: 38px;
+//                                 border: 2px solid map-get($id, Magnet);
+//                                 border-radius: 50%;
+//                             }
+
+//                             h5 {
+//                                 flex: 8;
+//                                 margin-left: 10px;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 // &.active>section.daftarPencarian {
+//                 //     opacity: 1;
+//                 //     pointer-events: auto;
+//                 // }
+//             }
+
+//             // section.pencarian.active {
+//             //     // top: 140px;
+                
+//             //     section.daftarPencarian {
+//             //         opacity: 1;
+//             //         display: flex;
+//             //         border-radius: 0 0 5px 5px;
+//             //         pointer-events: auto;
+//             //         flex-direction: column;
+//             //     }
+//             // }
+//         }
+
+//         section.masuk {
+//             display: none;
+//             right: 6.3%;
+//             z-index: map-get($Index_ID, Tingkat-Ketiga);
+//             position: relative;
+
+//             button {
+//                 border: none;
+//                 font-size: 24px;
+//                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                 border-radius: 5px;
+//                 background-color: map-get($id, Play);
+
+//                 &:hover {
+//                     cursor: default;
+//                     background-color: map-get($id, Magnet);
+//                 }
+
+//                 a {
+//                     color: white;
+//                     padding: 5px;
+
+//                     &:hover {
+//                         color: map-get($id, Tombol);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .kemas {
+//         // margin: 10% 5%;
+//         // display: flex;
+//         // flex-wrap: wrap;
+//         // align-content: stretch;
+//         // flex-direction: column;
+//         // justify-content: space-evenly;
+
+//         section.beranda {
+//             display: grid;
+//             justify-items: center;
+//             // flex-wrap: wrap;
+//             // flex-direction: column;
+
+//             article {
+//                 // bottom: 10%;
+//                 // flex: 1;
+//                 // order: 3;
+//                 // top: 60.6%;
+//                 // z-index: map-get($Index_ID, Tingkat-Pertama);
+//                 position: relative;
+//                 color: white;
+//                 // width: 400px;
+//                 cursor: default;
+//                 padding: 3%;
+//                 text-align: justify;
+//                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+//                 h1 {
+//                     font-size: 2em;
+//                     margin: 5% auto;
+//                 }
+//             }
+
+//             a {
+//                 // display: flex;
+
+//                 img {
+//                     position: relative;
+//                     // margin: auto;
+//                     width: 380px;
+//                     // display: flex;
+//                     // text-align: center;
+//                     box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                     // align-items: center;
+//                     // justify-content: space-between;
+
+
+//                     &.gambarProfil {
+//                         // flex: 1;
+//                         // order: 2;
+//                         border: 5px solid black;
+//                         z-index: map-get($Index_ID, Tingkat-Pertama);
+//                         // position: relative;
+//                         border-radius: 50%;
+//                     }
+
+//                     &.gambarProduk {
+//                         // flex: 1;
+//                         // order: 1;
+//                         // top: 0;
+//                         // left: 0;
+//                         // width: 100vw;
+//                         // position: absolute;
+//                     }
+//                 }
+//             }
+//         }
+
+//         section.masuk {
+//             display: none;
+//             color: map-get($id, Tombol);
+//             width: 450px;
+//             margin: auto;
+//             height: 400px;
+//             display: flex;
+//             box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//             align-items: center;
+//             border-radius: 5px;
+//             flex-direction: column;
+//             justify-content: space-evenly;
+//             background-color: map-get($id, Magnet);
+
+//             h1 {
+//                 cursor: default;
+//                 font-size: 2.6em;
+//                 text-align: center;
+//                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+//             }
+
+//             h5 {
+//                 font-size: medium;
+//                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+//                 font-weight: 500;
+//             }
+
+//             input {
+//                 width: 280px;
+//                 margin: 12px auto 48px;
+//                 height: 32px;
+//                 border: none;
+//                 outline: none;
+//                 padding: 10px;
+//                 font-size: 18px;
+//                 border-radius: 3px;
+//                 background-color: white;
+//             }
+
+//             li {
+//                 display: flex;
+//                 justify-content: flex-end;
+
+//                 button {
+//                     color: white;
+//                     border: none;
+//                     padding: 5px;
+//                     font-size: 1.1em;
+//                     box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                     border-radius: 5px;
+//                     background-color: map-get($id, Play);
+
+//                     &:hover {
+//                         color: map-get($id, Tombol);
+//                         cursor: pointer;
+//                         background-color: map-get($id, Hover);
+//                     }
+//                 }
+//             }
+//         }
+
+//         section.videografi {
+//             display: none;
+//             width: 93.9vw;
+//             position: absolute;
+
+//             .daftarVideo {
+//                 text-align: center;
+//                 overflow-y: overlay;
+
+//                 ul {
+//                     gap: 25px 15px;
+//                     display: grid;
+//                     max-width: 1262px;
+//                     max-height: 446px;
+//                     grid-template-columns: auto auto auto auto;
+
+//                     li {
+//                         text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+//                         a {
+//                             color: white;
+//                             padding: 12px;
+//                             border-radius: 5px;
+
+//                             &:hover {
+//                                 color: map-get($id, Tombol);
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+//                                 background-color: map-get($id, Hover);
+//                             }
+
+//                             img {
+//                                 height: 150px;
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 border-radius: 5%;
+//                             }
+
+//                             .judul {
+//                                 margin-top: 8px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         section.diskografi {
+//             display: none;
+//             width: 93.9vw;
+//             position: absolute;
+
+//             .daftarMusik {
+//                 text-align: center;
+//                 overflow-y: overlay;
+
+//                 ul {
+//                     gap: 20px;
+//                     display: grid;
+//                     max-width: 1262px;
+//                     max-height: 446px;
+//                     grid-template-columns: auto auto auto auto auto auto;
+
+//                     li {
+//                         text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+//                         a {
+//                             color: white;
+//                             padding: 12px;
+//                             border-radius: 5px;
+
+//                             &:hover {
+//                                 color: map-get($id, Tombol);
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+//                                 background-color: map-get($id, Hover);
+//                             }
+
+//                             img {
+//                                 height: 150px;
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 border-radius: 3%;
+//                             }
+
+//                             .judul {
+//                                 margin-top: 8px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         section.toko {
+//             display: none;
+//             width: 93.9vw;
+//             position: absolute;
+
+//             .daftarToko {
+//                 text-align: center;
+//                 overflow-y: overlay;
+
+//                 ul {
+//                     gap: 20px;
+//                     display: grid;
+//                     max-width: 1262px;
+//                     max-height: 446px;
+//                     grid-template-columns: auto auto auto auto auto auto;
+
+//                     li {
+//                         text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+
+//                         a {
+//                             color: white;
+//                             padding: 12px;
+//                             border-radius: 5px;
+
+//                             &:hover {
+//                                 color: map-get($id, Tombol);
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 text-shadow: 0 1px 5px rgba(0, 0, 0, .38);
+//                                 background-color: map-get($id, Hover);
+//                             }
+
+//                             img {
+//                                 height: 150px;
+//                                 border: 3px solid black;
+//                                 box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+//                                 border-radius: 50%;
+//                             }
+
+//                             .judul {
+//                                 margin-top: 8px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     /* Akhir Kode Memberikan Gaya */
+// }
+// Akhir Responsif by PaDhika
+
+// Media Overview
+// Laptop
+// @media screen and (min-width: 1024px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// Mobile S
+// @media screen and (min-width: 320px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// Mobile M
+// @media screen and (max-width: 375px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// Mobile L
+// @media screen and (max-width: 425px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// Tablet
+// @media screen and (max-width: 768px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// Laptop L
+// @media screen and (max-width: 1440px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+
+// 4K
+// @media screen and (max-width: 2560px) {
+//      namaTag/class {
+//         nilai;
+//     }
+// }
+// Akhir Kode Media Overview

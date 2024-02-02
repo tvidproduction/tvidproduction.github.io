@@ -1,0 +1,901 @@
+/* Reset Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  color: #1a1a1a;
+  display: block;
+  text-decoration: none;
+}
+
+.wadah {
+  color: black;
+  height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
+  letter-spacing: 1px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+  background-color: #848484;
+}
+
+/* Akhir Kode Reset Style */
+@media (min-width: 1366px) {
+  /* Memberikan Gaya*/
+  nav {
+    top: 4.6%;
+    width: 100vw;
+    z-index: 2 !important;
+    display: flex;
+    position: absolute;
+  }
+  nav .burger {
+    left: 3%;
+    height: 20px;
+    z-index: 5 !important;
+    display: flex;
+    position: relative;
+    margin-top: 0.65%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  nav .burger input {
+    top: -4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+  }
+  nav .burger span {
+    width: 28px;
+    height: 3px;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    background-color: #1a1a1a;
+  }
+  nav .burger span:nth-child(2) {
+    width: 17px;
+  }
+  nav .burger span:last-child {
+    width: 23px;
+  }
+  nav .burger input:checked ~ span:nth-child(2) {
+    width: 28px;
+  }
+  nav .burger input:checked ~ span:last-child {
+    width: 28px;
+  }
+  nav ul {
+    top: -92px;
+    left: 0;
+    width: 28%;
+    height: 115vh;
+    opacity: 0;
+    z-index: 4 !important;
+    display: flex;
+    position: fixed;
+    transform: translateX(-101%);
+    transition: all 800ms ease;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+  }
+  nav ul.geser {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  nav ul a {
+    width: 381px;
+    color: #848484;
+    height: 10vh;
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    letter-spacing: 3px;
+    justify-content: center;
+  }
+  nav ul a:hover {
+    color: white;
+    box-shadow: -5px 0 5px 1px #1a1a1a;
+    font-weight: 500;
+    background-color: #848484;
+  }
+  nav ul a:active {
+    color: white;
+    font-weight: 700;
+  }
+  nav ul h6 {
+    top: 700px;
+    color: #666;
+    margin: -12px -107px;
+    cursor: default;
+    position: absolute;
+    text-shadow: 0 1px 3px #1a1a1a;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  nav .pembungkusPencarian {
+    margin: 0.26% 35.5% 0 35.55%;
+    z-index: 3 !important;
+    position: relative;
+  }
+  nav .pembungkusPencarian section.pencarian {
+    width: 100%;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    background: white;
+    border-radius: 5px;
+  }
+  nav .pembungkusPencarian section.pencarian input {
+    width: 340px;
+    height: 32px;
+    border: none;
+    padding: 0 10px 0 10px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+  }
+  nav .pembungkusPencarian section.pencarian input::placeholder {
+    text-align: center;
+  }
+  nav .pembungkusPencarian section.pencarian.active section.daftarPencarian {
+    opacity: 1;
+    display: flex;
+    border-radius: 0 0 5px 5px;
+    pointer-events: auto;
+    flex-direction: column;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian {
+    opacity: 0;
+    display: none;
+    overflow-y: auto;
+    max-height: 280px;
+    pointer-events: none;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li {
+    list-style: none;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a {
+    color: #1a1a1a;
+    display: flex;
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a:hover {
+    width: 100%;
+    color: #727272;
+    background-color: #ddd;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a img {
+    flex: 1;
+/*    height: 38px;*/
+    border: 2px solid #474747;
+    border-radius: 50%;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a h5 {
+    flex: 8;
+    margin-left: 10px;
+  }
+  nav section.masuk {
+    right: 6.3%;
+    z-index: 3 !important;
+    position: relative;
+  }
+  nav section.masuk button {
+    border: none;
+    font-size: 24px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+  }
+  nav section.masuk button:hover {
+    cursor: default;
+    background-color: #474747;
+  }
+  nav section.masuk button a {
+    color: white;
+    padding: 5px;
+  }
+  nav section.masuk button a:hover {
+    color: #ddd;
+  }
+  .kemas {
+    margin: 115px 40px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .kemas section.beranda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kemas section.beranda article {
+    color: white;
+    width: 400px;
+    cursor: default;
+    padding: 7px;
+    text-align: justify;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.beranda article h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .kemas section.beranda a {
+    border-radius: 50%;
+  }
+  .kemas section.beranda a img {
+/*    width: 380px;*/
+    display: flex;
+    text-align: center;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kemas section.beranda a img.gambarProfil {
+    border: 5px solid black;
+    z-index: 1 !important;
+    position: relative;
+    border-radius: 50%;
+  }
+  .kemas section.masuk {
+    color: #ddd;
+    width: 450px;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #474747;
+  }
+  .kemas section.masuk h1 {
+    cursor: default;
+    font-size: 2.6em;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.masuk h5 {
+    font-size: medium;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    font-weight: 500;
+  }
+  .kemas section.masuk input {
+    width: 280px;
+    margin: 12px auto 48px;
+    height: 32px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: white;
+  }
+  .kemas section.masuk li {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .kemas section.masuk li button {
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 1.1em;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+  }
+  .kemas section.masuk li button:hover {
+    color: #ddd;
+    cursor: pointer;
+    background-color: #727272;
+  }
+  .kemas section.videografi {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.videografi .daftarVideo {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.videografi .daftarVideo ul {
+    gap: 25px 15px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto;
+  }
+  .kemas section.videografi .daftarVideo ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.videografi .daftarVideo ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.videografi .daftarVideo ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.videografi .daftarVideo ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5%;
+  }
+  .kemas section.videografi .daftarVideo ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.diskografi {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.diskografi .daftarMusik {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.diskografi .daftarMusik ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.diskografi .daftarMusik ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.diskografi .daftarMusik ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.diskografi .daftarMusik ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.diskografi .daftarMusik ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 3%;
+  }
+  .kemas section.diskografi .daftarMusik ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.toko {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.toko .daftarToko {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.toko .daftarToko ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.toko .daftarToko ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.toko .daftarToko ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.toko .daftarToko ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.toko .daftarToko ul li a img {
+    height: 150px;
+    border: 3px solid black;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+  }
+  .kemas section.toko .daftarToko ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.main {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.main .daftarPermainan {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.main .daftarPermainan ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.main .daftarPermainan ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.main .daftarPermainan ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.main .daftarPermainan ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.main .daftarPermainan ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 3%;
+  }
+  .kemas section.main .daftarPermainan ul li a .judul {
+    margin-top: 8px;
+  }
+  /* Akhir Kode Memberikan Gaya */
+}
+@media (min-width: 768px) {
+  /* Memberikan Gaya*/
+  nav {
+    top: 4.6%;
+    width: 100vw;
+    z-index: 2 !important;
+    display: flex;
+    position: absolute;
+  }
+  nav .burger {
+    left: 3%;
+    height: 20px;
+    z-index: 5 !important;
+    display: flex;
+    position: relative;
+    margin-top: 0.65%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  nav .burger input {
+    top: -4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+  }
+  nav .burger span {
+    width: 28px;
+    height: 3px;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    background-color: #1a1a1a;
+  }
+  nav .burger span:nth-child(2) {
+    width: 17px;
+  }
+  nav .burger span:last-child {
+    width: 23px;
+  }
+  nav .burger input:checked ~ span:nth-child(2) {
+    width: 28px;
+  }
+  nav .burger input:checked ~ span:last-child {
+    width: 28px;
+  }
+  nav ul {
+    top: -92px;
+    left: 0;
+    width: 28%;
+    height: 115vh;
+    opacity: 0;
+    z-index: 4 !important;
+    display: flex;
+    position: fixed;
+    transform: translateX(-101%);
+    transition: all 800ms ease;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+  }
+  nav ul.geser {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  nav ul a {
+    width: 381px;
+    color: #848484;
+    height: 10vh;
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    letter-spacing: 3px;
+    justify-content: center;
+  }
+  nav ul a:hover {
+    color: white;
+    box-shadow: -5px 0 5px 1px #1a1a1a;
+    font-weight: 500;
+    background-color: #848484;
+  }
+  nav ul a:active {
+    color: white;
+    font-weight: 700;
+  }
+  nav ul h6 {
+    top: 700px;
+    color: #666;
+    margin: -12px -107px;
+    cursor: default;
+    position: absolute;
+    text-shadow: 0 1px 3px #1a1a1a;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  nav .pembungkusPencarian {
+    margin: 0.26% 35.5% 0 35.55%;
+    z-index: 3 !important;
+    position: relative;
+  }
+  nav .pembungkusPencarian section.pencarian {
+    width: 100%;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    background: white;
+    border-radius: 5px;
+  }
+  nav .pembungkusPencarian section.pencarian input {
+    width: 340px;
+    height: 32px;
+    border: none;
+    padding: 0 10px 0 10px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+  }
+  nav .pembungkusPencarian section.pencarian input::placeholder {
+    text-align: center;
+  }
+  nav .pembungkusPencarian section.pencarian.active section.daftarPencarian {
+    opacity: 1;
+    display: flex;
+    border-radius: 0 0 5px 5px;
+    pointer-events: auto;
+    flex-direction: column;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian {
+    opacity: 0;
+    display: none;
+    overflow-y: auto;
+    max-height: 280px;
+    pointer-events: none;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li {
+    list-style: none;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a {
+    color: #1a1a1a;
+    display: flex;
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a:hover {
+    width: 100%;
+    color: #727272;
+    background-color: #ddd;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a img {
+    flex: 1;
+    height: 38px;
+    border: 2px solid #474747;
+    border-radius: 50%;
+  }
+  nav .pembungkusPencarian section.pencarian section.daftarPencarian li a h5 {
+    flex: 8;
+    margin-left: 10px;
+  }
+  nav section.masuk {
+    right: 6.3%;
+    z-index: 3 !important;
+    position: relative;
+  }
+  nav section.masuk button {
+    border: none;
+    font-size: 24px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+  }
+  nav section.masuk button:hover {
+    cursor: default;
+    background-color: #474747;
+  }
+  nav section.masuk button a {
+    color: white;
+    padding: 5px;
+  }
+  nav section.masuk button a:hover {
+    color: #ddd;
+  }
+  .kemas {
+    margin: 115px 40px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .kemas section.beranda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kemas section.beranda article {
+    color: white;
+    width: 400px;
+    cursor: default;
+    padding: 7px;
+    text-align: justify;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.beranda article h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .kemas section.beranda a {
+    border-radius: 50%;
+  }
+  .kemas section.beranda a img {
+    width: 380px;
+    display: flex;
+    text-align: center;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kemas section.beranda a img.gambarProfil {
+    border: 5px solid black;
+    z-index: 1 !important;
+    position: relative;
+    border-radius: 50%;
+  }
+  .kemas section.masuk {
+    color: #ddd;
+    width: 450px;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #474747;
+  }
+  .kemas section.masuk h1 {
+    cursor: default;
+    font-size: 2.6em;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.masuk h5 {
+    font-size: medium;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    font-weight: 500;
+  }
+  .kemas section.masuk input {
+    width: 280px;
+    margin: 12px auto 48px;
+    height: 32px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: white;
+  }
+  .kemas section.masuk li {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .kemas section.masuk li button {
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 1.1em;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    background-color: #1a1a1a;
+  }
+  .kemas section.masuk li button:hover {
+    color: #ddd;
+    cursor: pointer;
+    background-color: #727272;
+  }
+  .kemas section.videografi {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.videografi .daftarVideo {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.videografi .daftarVideo ul {
+    gap: 25px 15px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto;
+  }
+  .kemas section.videografi .daftarVideo ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.videografi .daftarVideo ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.videografi .daftarVideo ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.videografi .daftarVideo ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5%;
+  }
+  .kemas section.videografi .daftarVideo ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.diskografi {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.diskografi .daftarMusik {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.diskografi .daftarMusik ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.diskografi .daftarMusik ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.diskografi .daftarMusik ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.diskografi .daftarMusik ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.diskografi .daftarMusik ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 3%;
+  }
+  .kemas section.diskografi .daftarMusik ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.toko {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.toko .daftarToko {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.toko .daftarToko ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.toko .daftarToko ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.toko .daftarToko ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.toko .daftarToko ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.toko .daftarToko ul li a img {
+    height: 150px;
+    border: 3px solid black;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+  }
+  .kemas section.toko .daftarToko ul li a .judul {
+    margin-top: 8px;
+  }
+  .kemas section.main {
+    width: 93.9vw;
+    position: absolute;
+  }
+  .kemas section.main .daftarPermainan {
+    text-align: center;
+    overflow-y: overlay;
+  }
+  .kemas section.main .daftarPermainan ul {
+    gap: 20px;
+    display: grid;
+    max-width: 1262px;
+    max-height: 446px;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .kemas section.main .daftarPermainan ul li {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  }
+  .kemas section.main .daftarPermainan ul li a {
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .kemas section.main .daftarPermainan ul li a:hover {
+    color: #ddd;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+    background-color: #727272;
+  }
+  .kemas section.main .daftarPermainan ul li a img {
+    height: 150px;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 3%;
+  }
+  .kemas section.main .daftarPermainan ul li a .judul {
+    margin-top: 8px;
+  }
+  /* Akhir Kode Memberikan Gaya */
+}
+
+/*# sourceMappingURL=style.css.map */

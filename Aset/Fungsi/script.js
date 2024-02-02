@@ -1,0 +1,1 @@
+const allFunctions = require('./Node_Packages_Management/Terminal', './Users_Define_Functions/Slots')

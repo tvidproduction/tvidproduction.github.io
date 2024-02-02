@@ -1,0 +1,1 @@
+const tufrenStated = require('./Tufren/Stated')
