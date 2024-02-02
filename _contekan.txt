@@ -1,0 +1,22 @@
+CONTOH GRAPHIC LOG CLI GIT
+alias periksa="git log --all --decorate --oneline --graph"
+
+CONTOH COMPILER FOR SASS/SCSS FILE
+sass sass/input.scss gaya/style.css -w
+
+CONTOH MEMBUAT FILE IN LARAVEL
+php artisan make:model [namaFile] -cfms
+
+CONTOH MIGRATE&SEEDING IN LARAVEL
+php artisan migrate:fresh --seed
+
+CONTOH CLI TINKER
+php artisan tinker
+
+CONTOH CLI MAKE&REMOVE DIRECTORY
+mkdir [namaDirectory|Folder]
+rmdir [namaDirectory|Folder]
+
+CONTOH CLI MAKE&REMOVE FILE
+touch [namaFile.(extentionsFile)]
+rm [namaFile.(extentionsFile)]

@@ -1,4 +1,5 @@
 * {
+  border: solid red 1px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,8 +27,8 @@ a {
   overflow-x: hidden;
   font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
   letter-spacing: 1px;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
-  background-color: #848484;
+  background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.78) 100%); /* Day Mode */
+  background-color: #848484; /* Day Mode */
 }
 
 .wadah nav.bawah {
@@ -241,10 +242,12 @@ a {
   background-image: linear-gradient(transparent, deepskyblue);
 }
 .wadah main.kemas section.beranda a[href="/Product"] {
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+  background-image: linear-gradient(transparent 80%, #848484 100%); /* Day Mode */
 }
 .wadah main.kemas section.beranda a[href="/Product"] img.gambarProduk {
   width: 100%;
+  z-index: -1 !important;
+  position: relative;
 }
 .wadah main.kemas section.produk {
   display: grid;
@@ -280,6 +283,42 @@ a {
   border-radius: 50%;
 }
 .wadah main.kemas section.produk a[href="/"] img.gambarProduk {
+  width: 100%;
+}
+.wadah main.kemas section.faktur {
+  display: grid;
+  justify-items: center;
+}
+.wadah main.kemas section.faktur h3, .wadah main.kemas section.faktur h6 {
+  order: 1;
+  cursor: default;
+}
+.wadah main.kemas section.faktur h3 {
+  margin: 4% auto 2%;
+  font-size: 2em;
+}
+.wadah main.kemas section.faktur h6 {
+  margin: 0 auto 6%;
+}
+.wadah main.kemas section.faktur article {
+  color: white;
+  order: 2;
+  cursor: default;
+  padding: 3%;
+  text-align: justify;
+}
+.wadah main.kemas section.faktur article h1 {
+  margin: 4% auto;
+  font-size: 2em;
+}
+.wadah main.kemas section.faktur article p {
+  padding: 0 0 18%;
+}
+.wadah main.kemas section.faktur a[href="/"] img.gambarProfil {
+  border: solid 5px black;
+  border-radius: 50%;
+}
+.wadah main.kemas section.faktur a[href="/"] img.gambarProduk {
   width: 100%;
 }
 .wadah main.kemas section.tentang {

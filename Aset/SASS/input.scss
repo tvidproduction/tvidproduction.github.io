@@ -10,22 +10,23 @@ $Colors-ID: (
 );
 
 $Indexes-ID: (
-    Tingkat-Dasar       : 0 !important,
-    Tingkat-Pertama     : 1 !important,
-    Tingkat-Kedua       : 2 !important,
-    Tingkat-Ketiga      : 3 !important,
-    Tingkat-Keempat     : 4 !important,
-    Tingkat-Kelima      : 5 !important,
-    Tingkat-Keenam      : 6 !important,
-    Tingkat-Ketujuh     : 7 !important,
-    Tingkat-Kedelapan   : 8 !important,
-    Tingkat-Kesembilan  : 9 !important
+    Tingkat-Minus-Dasar	: -1 !important,
+    Tingkat-Dasar       :  0 !important,
+    Tingkat-Pertama     :  1 !important,
+    Tingkat-Kedua       :  2 !important,
+    Tingkat-Ketiga      :  3 !important,
+    Tingkat-Keempat     :  4 !important,
+    Tingkat-Kelima      :  5 !important,
+    Tingkat-Keenam      :  6 !important,
+    Tingkat-Ketujuh     :  7 !important,
+    Tingkat-Kedelapan   :  8 !important,
+    Tingkat-Kesembilan  :  9 !important
 );
 // Akhir Kode Root
 
 // Reset Style
 * {
-	// border: solid red 1px;  
+	border: solid red 1px;  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,14 +51,15 @@ a {
 }
 
 .wadah {
-    // color: black; */
+    // color: black;
     // height: 100vh; */
     display: grid;
     overflow-x: hidden;
     font-family: bahnschrift, helvetica, arial, monospace, sans-serif;
     letter-spacing: 1px;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
-    background-color: map-get($Colors-ID, Background);
+    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, .78) 100%); /* Day Mode */
+    background-color: map-get($Colors-ID, Background); /* Day Mode */
+    // background-color: map-get($Colors-ID, Play); /* Night Mode */
 }
 // Akhir Kode Reset Style
 
@@ -323,10 +325,13 @@ a {
 			}
 
 			a[href="/Product"] {
-				background-image: linear-gradient(transparent, rgba(0, 0, 0, .78));
+				background-image: linear-gradient(transparent 80%, map-get($Colors-ID, Background) 100%); /* Day Mode */
+				// background-image: linear-gradient(transparent 80%, map-get($Colors-ID, Play) 100%); /* Night Mode */
 
 				img.gambarProduk {
 					width: 100%;
+					z-index: map-get($Indexes-ID, Tingkat-Minus-Dasar);
+					position: relative;
 				}
 			}
 		}
@@ -378,6 +383,53 @@ a {
 			}
 		}
 		// Akhir Kode Untuk Halaman Produk
+
+		// Untuk Halaman Faktur
+		section.faktur {
+			display: grid;
+			justify-items: center;
+
+			h3, h6 {
+				order: 1;
+				cursor: default;
+			}
+			h3 {
+				margin: 4% auto 2%;
+				font-size: 2em;
+			}
+			h6 {
+				margin: 0 auto 6%;
+			}
+
+			article {
+				color: white;
+				order: 2;
+				cursor: default;
+				padding: 3%;
+				text-align: justify;
+
+				h1 {
+					margin: 4% auto;
+					font-size: 2em;
+				}
+
+				p {
+					padding: 0 0 18%;
+				}
+			}
+
+			a[href="/"] {
+				img.gambarProfil {
+					border: solid 5px black;
+					// display: none;
+					border-radius: 50%;
+				}
+				img.gambarProduk {
+					width: 100%;
+				}
+			}
+		}
+		// Akhir Kode Untuk Halaman Faktur
 
 		// Untuk Halaman Tentang
 		section.tentang {

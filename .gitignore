@@ -43,7 +43,6 @@ $RECYCLE.BIN/
 ### IGNORE oleh TVID Developments Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore ###
 /About/index1.html
 /Account
-/Aset/Fungsi
 /Aset/_Fungsi
 /Aset/_Gaya
 /Aset/_SASS
@@ -52,11 +51,13 @@ $RECYCLE.BIN/
 /Aset/data/#ID-Data/laravel-9
 # /Aset/data/#ID-Data/mockupWeb
 # /Aset/data/#ID-Data/pelajaranYangdiKetik
-/Aset/data/#ID-Data/proposal usaha
+# /Aset/data/#ID-Data/proposal usaha
 /Aset/data/#ID-Data/Spotify Wrapped
 /Aset/data/#ID-Data/unreleaseFilePS
 # /Aset/data/#ID-Data/Web
+/Aset/Fungsi
 # /Aset/Gaya/style.css.map
+/Aset/konten.js
 /Discography/index1.html
 /node_modules
 /Play/Games
@@ -71,8 +72,16 @@ $RECYCLE.BIN/
 ._package.json
 # .gitattributes
 # .gitignore
-_contekan.txt
+# _contekan.txt
+data.json
 index1.html
 konfigurasi-antarmuka.js
 pengelola.js
 pengembang.js
+
+### Ignore Sementara ###
+index.html
+/Aset/Gaya
+/Aset/SASS
+/Aset/menu.js
+/Aset/script.js
