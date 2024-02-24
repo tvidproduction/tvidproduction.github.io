@@ -1,4 +1,4 @@
-import { keyword } from './Bagian/ContohData.json'
+import { keyword } from './Bagian/ContohData.js'
 
 // Search Function
 const kolomCari = document.querySelector('.pencarian');

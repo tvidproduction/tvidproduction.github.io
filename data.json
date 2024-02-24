@@ -11,58 +11,82 @@
 			"TVID Plays"
 		]
 	},
-	"Halaman": {
-		"Beranda": {
-			"Nama": "Beranda",
-			"Alamat": "/"
-		},
-		"Videografi": {
-			"Nama": "Videografi",
-			"Alamat": "/Videography"
-		},
-		"Diskografi": {
-			"Nama": "Diskografi",
-			"Alamat": "/Discography"
-		},
-		"Toko": {
-			"Nama": "Toko",
-			"Alamat": "/Store"
-		},
-		"Main": {
-			"Nama": "Main",
-			"Alamat": "/Play"
-		},
-		"Tentang Kami": {
-			"Nama": "Tentang Kami",
-			"Alamat": "https://wp.me/Pbwvnt-2l"
-		},
-		"Hubungi Kami": {
-			"Nama": "Hubungi Kami",
-			"Alamat": "https://wa.me/message/4FUFJSHQ3MN7N1"
-		},
-		"WhatsApp Kami": {
-			"Nama": "WhatsApp Kami",
-			"Alamat": "https://api.whatsapp.com/send/?phone=6285195401239&text&type=phone_number&app_absent=1"
-		}
+	"Sumber": {
+		"Favicon": "Aset/TVID-Favicon.png",
+		"StyleSheets": "Aset/Gaya/style.css",
+		"Slogan": "Capacity of Creativity (Stay Creative)",
+		"Script": "Aset/Fungsi/script.js"
 	},
-	"Versi": "1.0.0",
-	"Untuk": "TVID Production",
-	"Akhiran": "Capacity of Creativity (Stay Creative)",
+	"Bilah_Menu": {
+		"Halaman": {
+			"Beranda": {
+				"Nama": "Beranda",
+				"Alamat": "/tvidproduction.github.io/"
+			},
+			"Videografi": {
+				"Nama": "Videografi",
+				"Alamat": "/tvidproduction.github.io/Videography"
+			},
+			"Diskografi": {
+				"Nama": "Diskografi",
+				"Alamat": "/tvidproduction.github.io/Discography"
+			},
+			"Toko": {
+				"Nama": "Toko",
+				"Alamat": "/tvidproduction.github.io/Store"
+			},
+			"Main": {
+				"Nama": "Main",
+				"Alamat": "/tvidproduction.github.io/Play"
+			},
+			"Masuk": {
+				"Nama": "Masuk",
+				"Alamat": "/tvidproduction.github.io/SignIn"
+			},
+			"Produk": {
+				"Nama": "Produk",
+				"Alamat": "/tvidproduction.github.io/Product"
+			},
+			"Tentang": {
+				"Nama": "Tentang",
+				"Alamat": "/tvidproduction.github.io/About"
+			},
+			"Tentang_Kami": {
+				"Nama": "Tentang Kami",
+				"Alamat": "https://wp.me/Pbwvnt-2l"
+			},
+			"Hubungi_Kami": {
+				"Nama": "Hubungi Kami",
+				"Alamat": "https://wa.me/message/4FUFJSHQ3MN7N1"
+			},
+			"WhatsApp_Kami": {
+				"Nama": "WhatsApp Kami",
+				"Alamat": "https://api.whatsapp.com/send/?phone=6285195401239&text=messageFromWebWaAPI&type=phone_number&app_absent=1"
+			}
+		},
+		"Waktu": 2019,
+		"Versi": "1.0.0",
+		"Gambar_Profil_Pencarian": [
+			"Aset/Gambar/Daftar Putar Spotify (Playlist) 5.0.png",
+			"Aset/Gambar/Profile.jpg"
+		],
+		"Maksimal_Karakter_PerNama": [
+			"30 Character Longes Character.",
+			"30 Character Longes Character "
+		],
+		"Tombol_Masuk": "Masuk"
+	},
+	"Konten": {
+		"Gambar_Produk": "Aset/Gambar/Antlia Cover.jpg",
+		"Gambar_Profil": "Aset/Gambar/Profile Picture TVID.jpg",
+		"Nama_Produk": "Artikel di Bawah Berisi 795 karakter",
+		"PengUnggah": "Tufren",
+		"Maksimal_Karakter_PerArtikel_Produk": "Ini adalah isi dari artikel yang maksimalnya berisi 800 karakter(for PC view), untuk menjelaskan produk dari gambar kotak yang ada di sebelah kanan, yang berbentuk kotak. Kalau gambar yang tengah itu, adalah gambar profil dari halaman ini. Jika di klik maka seharusnya mengarahkan ke halaman tentang pembuat halaman media ini. Saya sengaja menulisnya artikel ini lebih panjang, agar setidaknya hampir mencapai 800 karakter. Ketika anda telah membaca sampai bagian sini, itu artinya. Anda telah membaca setidaknya enam puluh persen atau lebih, untuk mencapai setidaknya 800 karakter dalam artikel ini. Tapi, maaf sekali. Karena saya telah lelah untuk mengetik. Maka, mungkin saya akan menyudahi artikel ini semampu saya dan ada kemungkinan ini masih belum mencapai 800 karakter dalam artikel ini."
+	},
 	"BekerjaSamaDengan": {
 		"Agi Upe": "Toko Kue",
 		"Apryas": "Toko Cemilan",
 		"Tovrn": "Artis",
 		"Tufren": "Pengembang"
-	},
-	"Sumber": {
-		"Favicon": "Aset/TVID-Favicon.png",
-		"StyleSheet": "Aset/Gaya/style.css",
-		"ProfilPencarian": [
-			"Aset/Gambar/Daftar Putar Spotify (Playlist) 5.0.png",
-			"Aset/Gambar/Profile.jpg"
-		],
-		"GambarPrduk": "Aset/Gambar/Antlia Cover.jpg",
-		"GambarProfil": "Aset/Gambar/Profile Picture TVID.jpg",
-		"Script": "Aset/script.js"
 	}
 }

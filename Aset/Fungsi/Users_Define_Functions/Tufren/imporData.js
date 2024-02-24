@@ -1,19 +1,4 @@
-// Menu Geser
-const menu = document.querySelector('.burger input')
-const navigasi = document.querySelector('nav ul')
-
-export const mengaksesBagianMenu = menu.addEventListener('click', ()=>{
-    navigasi.classList.toggle('geser')
-})
-// Akhir Menu Geser
-
-// Footer Waktu[Tahun]
-const isiDengan = new Date()
-
-export const tahunDiFooter = document.getElementById('waktu').innerHTML = isiDengan.getFullYear()
-// Akhir Footer Waktu[Tahun]
-
-// Impor dari data.json
+/*// Impor dari data.json
 const tautan = document.getElementsByTagName('a')
 
 export const imporData = new XMLHttpRequest()
@@ -22,20 +7,6 @@ imporData.onreadystatechange = function () {
             let data = JSON.parse(this.responseText)
             let Metadata = data.Metadata
             let Halaman = data.Halaman
-
-            /*// Meringkas Tautan
-            function tautan(n, a) {
-                for (let daftarMenu = 0; daftarMenu < Halaman.length; daftarMenu++) {
-                    n = Halaman.nama
-                    a = Halaman.alamat
-                    // Memberikan Kondisi (Sebenernye asal doang wkwkwk)
-                    '<a href="'+ a[daftarMenu].Alamat +'">'+ n[daftarMenu].Nama +'</a>'
-                }
-                // Menyiapkan Pola
-                // '<a href="'+ alamat +'">'+ nama +'</a>'
-            }
-            const menuBar = tautan()
-            // Akhir Meringkas Tautan*/
 
             // Navigasi Menu
             const menuBarBeranda = tautan[0].outerHTML = '<a href="'+ Halaman.Beranda.Alamat +'">'+ Halaman.Beranda.Nama +'</a>'
@@ -57,8 +28,6 @@ imporData.onreadystatechange = function () {
             // Akhir Navigasi Menu
     }
 }
-imporData.open('GET', '../tvidproduction.github.io/data.json', true)
+imporData.open('GET', '../../../../tvidproduction.github.io/data.json', true)
 imporData.send()
-// Akhir Impor dari data.json
-
-// module.exports = {getsData: imporData, openedMenuBar: mengaksesBagianMenu, tahunDiFooter: yearOnMenuBar}
+// Akhir Impor dari data.json*/

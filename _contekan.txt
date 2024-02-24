@@ -25,3 +25,6 @@ rmdir [namaDirectory|Folder]
 CONTOH CLI MAKE&REMOVE FILE
 touch [namaFile.(extentionsFile)]
 rm [namaFile.(extentionsFile)]
+
+MENJALANKAN PERINTAH CLI UNTUK WEBPACK
+npm run (namaScriptDariPackage.json)

@@ -41,6 +41,7 @@ $RECYCLE.BIN/
 .sass-cache/
 
 ### IGNORE oleh TVID Developments Dari .gitignore /Documents_folder/TVIDWeb/production/.gitignore ###
+npm-debug.log
 # /About/index1.html
 # /Account
 # /Aset/_Fungsi
@@ -77,7 +78,7 @@ $RECYCLE.BIN/
 # index1.html
 konfigurasi-antarmuka.js
 pengelola.js
-pengembang.js
+# pengembang.js
 
 ### Ignore Sementara ###
 # index.html

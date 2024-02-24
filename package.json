@@ -2,7 +2,7 @@
   "name": "tvidproduction.github.io",
   "version": "1.0.0",
   "description": "Tampilan Antarmuka Untuk TVID Developments, from TVID Production",
-  /*"main": "pengembang.js",*/
+  "main": "pengembang.js",
   "dependencies": {
     "acorn-import-assertions": "^1.8.0",
     "accepts": "^1.3.8",
@@ -561,8 +561,8 @@
       "url": "tovrn.blogspot.com"
     },
     {
-      // "author": "Tufren <novalto723@gmail.com> (https://youtube.com/@pel_)"
-      "name": "Tufren <novalto723@gmail.com> (https://youtube.com/@pel_)"
+      "author": "Tufren <ramandanovalto2@gmail.com> (https://youtube.com/@pel_)",
+      "name": "Tufren <ramandanovalto7@gmail.com> (https://youtube.com/@pel_)"
     }
   ],
   "license": "W3C",
@@ -571,7 +571,7 @@
     "email": "tv.id.production.29.11@gmail.com"
   },
   "homepage": "https://github.com/tvidproduction/tvidproduction.github.io#readme",
-  // "funding": "https://pay.me/tvidproduction",
+  "funding": "https://pay.me/tvidproduction",
   "funding": [
     {
       "type": "PayPal",

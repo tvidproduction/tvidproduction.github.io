@@ -1,8 +1,13 @@
-import {
-	openedMenuBar,
-	yearOnMenuBar,
-	versiOnMenuBar
-} from './menu.js'
+/*import {
+	imporData,
+	mengaksesBagianMenu,
+	tahunDiFooter
+} from './menu.js'*/
+
+/*import {
+	// xhr
+	// ambilData
+} from './konten.js'*/
 
 
 
@@ -39,12 +44,12 @@ let titikAwalYPojokAtas = 0
 let horizontal = 20
 let vertikal = 40
 
-function barisPembentukKristal(x, y, h, v) {
+/*function barisPembentukKristal(x, y, h, v) {
 	let x, y, h, v
 	if (kristal <= 17 {
 		// 
 	})
-}
+}*/
 
 konteks.strokeStyle = '#999'
 konteks.fillStyle = 'gold'
