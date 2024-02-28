@@ -5,12 +5,13 @@ const jalur = require('path')
 
 module.exports = {
 	// mode: 'DEVELOPMENT',
-	mode: 'development',
+	// mode: 'development',
+	mode: 'production',
 	entry: './Aset/Fungsi/Users_Define_Functions/Slots.js',
 	watch: false,
-	// devtool: true,
+	//** devtool: true,
 	// devtool: 'eval',
-	devtool: false,
+	// devtool: false,
 	output: {
 		path: jalur.resolve(__dirname, 'Aset/Fungsi/Node_Packages_Management'),
 		filename: 'Terminal.js',

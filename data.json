@@ -13,7 +13,7 @@
 	},
 	"Sumber": {
 		"Favicon": "Aset/TVID-Favicon.png",
-		"StyleSheets": "Aset/Gaya/style.css",
+		"StyleSheets": "Aset/_Gaya/style.css",
 		"Slogan": "Capacity of Creativity (Stay Creative)",
 		"Script": "Aset/Fungsi/script.js"
 	},

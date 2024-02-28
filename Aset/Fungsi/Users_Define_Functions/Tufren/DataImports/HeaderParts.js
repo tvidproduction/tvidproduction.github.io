@@ -27,10 +27,10 @@ imporDataHeaderParts.onreadystatechange = function () {
             const namaHalaman = document.getElementsByTagName('title')[0].innerHTML = '[ '+ Halaman.Beranda.Nama +' ] &lt;|&gt; '+ Metadata.Keywords[0] +' &mdash; '+ Sumber.Slogan
 
             // Belum Di Terapkan
-            const headerPart = [metaDesk, metaAuth, metaKey, LinkIco, LinkStyle, namaHalaman]
+            // const headerPart = [metaDesk, metaAuth, metaKey, LinkIco, LinkStyle, namaHalaman]
             // AkhirBelum Di Terapkan
 
-            console.log(headerPart)
+            // console.log(headerPart)
 
             // Akhir Header
     }

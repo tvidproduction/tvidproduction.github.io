@@ -1,6 +1,6 @@
 // Impor dari data.json
 const tautan = document.getElementsByTagName('a')
-// const gambar = document.getElementsByTagName('img')
+const gambar = document.getElementsByTagName('img')
 
 export const imporDataContentsFill = new XMLHttpRequest()
 imporDataContentsFill.onreadystatechange = function () {
@@ -12,21 +12,25 @@ imporDataContentsFill.onreadystatechange = function () {
             let Konten = data.Konten
 
             // Contents
-            const gambarProduk = tautan[11].outerHTML = `<a href="`+ Halaman.Produk.Alamat +`" title="Gambar Produk TVID Store">
-                                                            <img src="`+ Konten.Gambar_Produk +`" alt="Gambar Produk" title="Gambar Produk TVID Store" class="gambarProduk" data-tilt width="380" loading="lazy">
-                                                         </a>`
+            // Bagian Produk
+            const tautanGambarProduk = tautan[11].outerHTML = '<a href="'+ Halaman.Produk.Alamat +'" title="Gambar Produk TVID Store">'+ gambarProduk +'</a>'
+            const gambarProduk = gambar[2].outerHTML = '<img src="'+ Konten.Gambar_Produk +'" alt="Gambar Produk" title="Gambar Produk TVID Store" class="gambarProduk" data-tilt width="380" loading="lazy">'
             const namaProduk = document.getElementsByTagName('h1')[0].outerHTML = '<h1>'+ Konten.Nama_Produk +'</h1>'
-            const gambarProfil = tautan[12].outerHTML = `<a href="`+ Halaman.Tentang.Alamat +`" target="_blank">
-                                                            <img src="`+ Konten.Gambar_Profil +`" alt="Gambar Profil" title="Gambar Profil `+ Konten.PengUnggah +`" class="gambarProfil" width="380" loading="lazy">
-                                                            <h6 title="`+ Konten.PengUnggah +`">`+ Konten.PengUnggah +`</h6>
-                                                         </a>`
+            // Akhir Bagian Produk
+
+            // Bagian Profil
+            const tautanGambarProfil = tautan[12].outerHTML = '<a href="'+ Halaman.Tentang.Alamat +'" target="_blank">'+ gambarProfil +'</a>'
+            const gambarProfil = gambar[3].outerHTML = '<img src="'+ Konten.Gambar_Profil +'" alt="Gambar Profil" title="Gambar Profil '+ Konten.PengUnggah +'" class="gambarProfil" width="380" loading="lazy">'
+            const namaPengUnggah = '<h6 title="'+ Konten.PengUnggah +'">'+ Konten.PengUnggah +'</h6>'
+            // Akhir Bagian Profil
+
             const Paragraph = document.getElementsByTagName('p')[0].outerHTML = '<p>'+ Konten.Maksimal_Karakter_PerArtikel_Produk +'</p>'
 
             // Belum Di Terapkan
-            const ContentFills = [gambarProduk, namaProduk, gambarProfil, Paragraph]
+            // const ContentFills = [tautanGambarProduk, gambarProduk, namaProduk, tautanGambarProfil, gambarProfil, namaPengUnggah, Paragraph]
             // AkhirBelum Di Terapkan
 
-            console.log(ContentFills)
+            // console.log(ContentFills)
 
             // Akhir Contents
     }

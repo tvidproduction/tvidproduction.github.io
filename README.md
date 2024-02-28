@@ -5,13 +5,16 @@ Ini mungkin membutuhkan waktu yang lama untuk mengembangkannya karena Pengembang
 Terima Kasih
 
 Mungkin Repository ini akan terus dikembangkan untuk mencapai idealisme Pemilik Repository atau Founder TVID itu sendiri
-## Memakai Sumber Dari:<code>[
+## Memakai Sumber Dari:
+```sh
+[
 - [HyperTextMarkupLanguage](https://html.spec.whatwg.org)
 - [CascadingStyleSheets](https://)
 - [JavaScript](https://)
 - [SyntacticallyAwesomeStyleSheets](https://sass-lang.com)
 - [WebPack](https://webpack.js.org)
-## ]</code>
+]
+```
 ## Kunjungi
 
 #### Klik <code>CTRL + Click Left</code> (Untuk Membuka di New Tab)

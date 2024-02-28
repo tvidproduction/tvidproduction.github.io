@@ -53,10 +53,10 @@ imporDataMenuBars.onreadystatechange = function () {
             const tombolMasuk = tautan[10].outerHTML = '<a href="'+ Halaman.Masuk.Alamat +'">'+ Halaman.Masuk.Nama +'</a>'
 
             // Belum Di Terapkan
-            const menuBar = [menuBarBeranda, menuBarVideografi, menuBarDiskografi, menuBarToko, menuBarMain, menuBarTentangKami, menuBarHubungiKami, menuBarWhatsAppKami, menuBarFooter, gambarProfilPencarian1, namaProfilPencarian1, gambarProfilPencarian2, namaProfilPencarian2, tombolMasuk]
+            // const menuBar = [menuBarBeranda, menuBarVideografi, menuBarDiskografi, menuBarToko, menuBarMain, menuBarTentangKami, menuBarHubungiKami, menuBarWhatsAppKami, menuBarFooter, gambarProfilPencarian1, namaProfilPencarian1, gambarProfilPencarian2, namaProfilPencarian2, tombolMasuk]
             // AkhirBelum Di Terapkan
 
-            console.log(menuBar)
+            // console.log(menuBar)
 
             // Akhir Navigasi
     }
