@@ -21,35 +21,35 @@
 		"Halaman": {
 			"Beranda": {
 				"Nama": "Beranda",
-				"Alamat": "/tvidproduction.github.io/"
+				"Alamat": "/"
 			},
 			"Videografi": {
 				"Nama": "Videografi",
-				"Alamat": "/tvidproduction.github.io/Videography"
+				"Alamat": "/Videography"
 			},
 			"Diskografi": {
 				"Nama": "Diskografi",
-				"Alamat": "/tvidproduction.github.io/Discography"
+				"Alamat": "/Discography"
 			},
 			"Toko": {
 				"Nama": "Toko",
-				"Alamat": "/tvidproduction.github.io/Store"
+				"Alamat": "/Store"
 			},
 			"Main": {
 				"Nama": "Main",
-				"Alamat": "/tvidproduction.github.io/Play"
+				"Alamat": "/Play"
 			},
 			"Masuk": {
 				"Nama": "Masuk",
-				"Alamat": "/tvidproduction.github.io/SignIn"
+				"Alamat": "/SignIn"
 			},
 			"Produk": {
 				"Nama": "Produk",
-				"Alamat": "/tvidproduction.github.io/Product"
+				"Alamat": "/Product"
 			},
 			"Tentang": {
 				"Nama": "Tentang",
-				"Alamat": "/tvidproduction.github.io/About"
+				"Alamat": "/About"
 			},
 			"Tentang_Kami": {
 				"Nama": "Tentang Kami",
@@ -84,9 +84,9 @@
 		"Maksimal_Karakter_PerArtikel_Produk": "Ini adalah isi dari artikel yang maksimalnya berisi 800 karakter(for PC view), untuk menjelaskan produk dari gambar kotak yang ada di sebelah kanan, yang berbentuk kotak. Kalau gambar yang tengah itu, adalah gambar profil dari halaman ini. Jika di klik maka seharusnya mengarahkan ke halaman tentang pembuat halaman media ini. Saya sengaja menulisnya artikel ini lebih panjang, agar setidaknya hampir mencapai 800 karakter. Ketika anda telah membaca sampai bagian sini, itu artinya. Anda telah membaca setidaknya enam puluh persen atau lebih, untuk mencapai setidaknya 800 karakter dalam artikel ini. Tapi, maaf sekali. Karena saya telah lelah untuk mengetik. Maka, mungkin saya akan menyudahi artikel ini semampu saya dan ada kemungkinan ini masih belum mencapai 800 karakter dalam artikel ini."
 	},
 	"BekerjaSamaDengan": {
-		"Agi Upe": "Toko Kue",
-		"Apryas": "Toko Cemilan",
-		"Tovrn": "Artis",
-		"Tufren": "Pengembang"
+		"Agi_Upe": "Agi Upe's Breads & Cake Store Homemade",
+		"Apryas": "Apryas Snacks Store Homemade",
+		"Tovrn": "Tovrn Music Recordings",
+		"Tufren": "Tufren Developments"
 	}
 }

@@ -6,7 +6,7 @@ Terima Kasih
 
 Mungkin Repository ini akan terus dikembangkan untuk mencapai idealisme Pemilik Repository atau Founder TVID itu sendiri
 ## Memakai Sumber Dari:
-```sh
+```
 [
 - [HyperTextMarkupLanguage](https://html.spec.whatwg.org)
 - [CascadingStyleSheets](https://)
